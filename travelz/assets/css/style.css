@@ -3015,3 +3015,9 @@ header .header-div .logo-div .logo_link {
 #notvalid{
   color: red;
 }
+#notvaliduser{
+  color: red;
+}
+#notvalidgroup{
+  color: red;
+}

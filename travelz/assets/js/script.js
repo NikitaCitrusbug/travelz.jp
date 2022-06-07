@@ -205,7 +205,36 @@ function checkButtonArea() {
           = "Please select an area"; 
   } 
 } 
+function myFunUser(){
+  var a = document.getElementsByClassName('form-checkbox form-checkbox-follow');
+  var newvar = 0;
+  var count;
+  for(count=0; count<a.length ; count++){
+    if(a[count].checked == true){
+      newvar = newvar+1;
 
+    }
+  }
+  if(newvar > 3){
+    document.getElementById("notvaliduser").innerHTML = "Please select only three users"
+    return false;
+  }
+}
+function myFunGroup(){
+  var a = document.getElementsByClassName('form-checkbox form-checkbox-groups');
+  var newvar = 0;
+  var count;
+  for(count=0; count<a.length ; count++){
+    if(a[count].checked == true){
+      newvar = newvar+1;
+
+    }
+  }
+  if(newvar >= 3){
+    document.getElementById("notvalidgroup").innerHTML = "Please select only two groups"
+    return false;
+  }
+}
 
 function formatoSelect(state) {
   if (!state.id) {
