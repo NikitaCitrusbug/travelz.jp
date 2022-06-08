@@ -164,12 +164,12 @@
                                                         <a href="#" class="btn btn-link btn-skip mr-30">Skip <span class="remove-mobile">to End of </span>Process!</a>
                                                     </div>
                                                     <div class="btn-right-side"> 
-                                                        <button class="btn btn-primary btn-common btn-continue" onclick="return checkButton()">
+                                                        <button class="btn btn-primary btn-common btn-continue" onclick="return checkButtonUser()">
                                                             <span class="text-span">Continue</span>
                                                             <i class="fe fe-arrow-right fe-icon"></i>
                                                         </button>
                                                         
-                                                    </div>    
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -213,7 +213,7 @@
                                                             <p>School Students</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio01" name="occupation-select" />
+                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio01" name="occupation-select" onclick="return checkButtonOccupation()" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
@@ -226,7 +226,7 @@
                                                             <p>University Students</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio02" name="occupation-select" />
+                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio02" name="occupation-select" onclick="return checkButtonOccupation()"/>
                                                 </div>
                                             </div>
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
@@ -239,7 +239,7 @@
                                                             <p>Agriculture</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio03" name="occupation-select" />
+                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio03" name="occupation-select" onclick="return checkButtonOccupation()"/>
                                                 </div>
                                             </div>
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
@@ -252,7 +252,7 @@
                                                             <p>Travel</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio04" name="occupation-select" />
+                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio04" name="occupation-select" onclick="return checkButtonOccupation()" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
@@ -265,17 +265,23 @@
                                                             <p>Other</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio05" name="occupation-select" />
+                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio05" name="occupation-select" onclick="return checkButtonOccupation()" />
                                                 </div>
                                             </div>
                                             <!-- <button type="button" onclick="return checkButton()"> Submit </button>  -->
-                                            <h3 id="disp" style= "color:green"> </h3>
-                                            <h4 id="error" style= "color:red"> </h4>
+                                            <div>
+
+                                                <h3 id="disp" style= "color:green"> </h3>
+                                            </div><br>
+                                            <div>
+                                                <h4 id="error" style= "color:red"> </h4>
+
+                                            </div>
                                         </div>
                                     </div>
 
                                 </div>
-                                <div class="footer-bottom-row">
+                                <!-- <div class="footer-bottom-row">
                                     <div class="container">
                                         <div class="row mr-minus-8">
                                             <div class="col-lg-12 plr-8">
@@ -297,7 +303,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- <div class="footer-bottom-row">
                                     <div class="button-row">
                                         <div class="btn-left-side justify-content-between"> 
@@ -423,7 +429,7 @@
                                     </div>
 
                                 </div>
-                                <div class="footer-bottom-row">
+                                <!-- <div class="footer-bottom-row">
                                     <div class="container">
                                         <div class="row mr-minus-8">
                                             <div class="col-lg-12 plr-8">
@@ -445,7 +451,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <!-- <div class="footer-bottom-row">
                                     <div class="button-row">
@@ -718,7 +724,7 @@
                                     
 
                                 </div>
-                                <div class="footer-bottom-row">
+                                <!-- <div class="footer-bottom-row">
                                     <div class="container">
                                         <div class="row mr-minus-8">
                                             <div class="col-lg-12 plr-8">
@@ -740,7 +746,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <!-- <div class="footer-bottom-row">
                                     <div class="button-row">
@@ -1112,6 +1118,11 @@
                                             </div>
 
                                         </div>
+                                    </div>
+                                    <div>
+                                        <h3 id="displayuser" style= "color:green"> </h3>
+                                        <h4 id="errormsguser" style= "color:red"> </h4>
+
                                     </div>
 
                                 </div>
@@ -1526,7 +1537,7 @@
                                                     <div class="form-group">
                                                         <label for="">Enter password</label>
                                                         <div class="input-group-box password-box">
-                                                            <input type="password" class="form-control" name="password" id="password" placeholder="Enter password">
+                                                            <input type="password" class="form-control" name="password" id="password" placeholder="Enter password" onkeyup="return myFunPass()" >
                                                             <button type="button" id="show_password" name="show_password" class="pass-hide password-view-click"><i class="material-icons password-view">remove_red_eye</i></button> 
                                                         </div>
                                                     </div>
@@ -1537,16 +1548,54 @@
                                                     <div class="form-group">
                                                         <label for="">Confirm password</label>
                                                         <div class="input-group-box password-box">
-                                                            <input type="password" class="form-control" name="password" id="confirm-password" placeholder="Enter confirm password">
+                                                            <input type="password" class="form-control" name="password" id="confirm-password" placeholder="Enter confirm password" onkeyup="return myFunConPass()">
                                                             <button type="button" id="show_password2" name="show_password" class="pass-hide password-view-click"><i class="material-icons password-view">remove_red_eye</i></button> 
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div>
+                                                <span id="notvalidpass">
+
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div>
+                                        <h3 id="dis" style= "color:green"> </h3>
+                                        <h4 id="password1" style= "color:red"> </h4>
+                                        <h4 id="confpass" style= "color:red"> </h4>
+
+                                    </div>
+                                    <!-- <div>
+                                        <h3 id="password1"></h3>
+                                        <h3 id="confpass"></h3>
+                                    </div> -->
 
                                 </div>
+                                <!-- <div class="footer-bottom-row">
+                                    <div class="container">
+                                        <div class="row mr-minus-8">
+                                            <div class="col-lg-12 plr-8">
+                                                <div class="button-row">
+                                                    <div class="btn-left-side justify-content-between"> 
+                                                        <button class="btn btn-outline-primary btn-common btn-previous">
+                                                            <i class="fe fe-arrow-left fe-icon"></i>
+                                                            <span class="text-span">Previous</span>
+                                                        </button>
+                                                        <a href="#" class="btn btn-link btn-skip mr-30">Skip <span class="remove-mobile">to End of </span>Process!</a>
+                                                    </div>
+                                                    <div class="btn-right-side"> 
+                                                        <button class="btn btn-primary btn-common btn-continue" onclick="return myFunPass()">
+                                                            <span class="text-span">Continue</span>
+                                                            <i class="fe fe-arrow-right fe-icon"></i>
+                                                        </button>
+                                                    </div>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
 
                                 <!-- <div class="footer-bottom-row">
                                     <div class="button-row button-row02 justify-content-end">
@@ -1602,7 +1651,7 @@
                                                             <p>Proceed to Timeline</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-what-to-do" id="what-to-do-radio01" name="what-to-do-select" />
+                                                    <input type="radio" class="form-radio form-radio-what-to-do" id="what-to-do-radio01" name="what-to-do-select" onclick="return myFunWWhat()" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
@@ -1615,7 +1664,7 @@
                                                             <p>Create a Map</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-what-to-do" id="what-to-do-radio02" name="what-to-do-select" />
+                                                    <input type="radio" class="form-radio form-radio-what-to-do" id="what-to-do-radio02" name="what-to-do-select" onclick="return myFunWhat()" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
@@ -1628,14 +1677,47 @@
                                                             <p>Create a travel plan</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-what-to-do" id="what-to-do-radio03" name="what-to-do-select" />
+                                                    <input type="radio" class="form-radio form-radio-what-to-do" id="what-to-do-radio03" name="what-to-do-select" onclick="return myFunWhat()" />
                                                 </div>
+                                            </div>
+                                            <div>
+                                                <span id="notvalidwhat">
+
+                                                </span>
                                             </div>
                                             
                                         </div>
                                     </div>
+                                    <div>
+                                        <h3 id="displaywhat" style= "color:green"> </h3>
+                                        <h4 id="errormsgwhat" style= "color:red"> </h4>
+
+                                    </div>
 
                                 </div>
+                                <!-- <div class="footer-bottom-row">
+                                    <div class="container">
+                                        <div class="row mr-minus-8">
+                                            <div class="col-lg-12 plr-8">
+                                                <div class="button-row">
+                                                    <div class="btn-left-side justify-content-between"> 
+                                                        <button class="btn btn-outline-primary btn-common btn-previous">
+                                                            <i class="fe fe-arrow-left fe-icon"></i>
+                                                            <span class="text-span">Previous</span>
+                                                        </button>
+                                                        <a href="#" class="btn btn-link btn-skip mr-30">Skip <span class="remove-mobile">to End of </span>Process!</a>
+                                                    </div>
+                                                    <div class="btn-right-side"> 
+                                                        <button class="btn btn-primary btn-common btn-continue" onclick="return checkButtonWhat()">
+                                                            <span class="text-span">Continue</span>
+                                                            <i class="fe fe-arrow-right fe-icon"></i>
+                                                        </button>
+                                                    </div>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
 
                                 <!-- <div class="footer-bottom-row">
                                     <div class="button-row button-row02">
