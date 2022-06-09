@@ -24,10 +24,10 @@ function checkButtonUser() {
                 document.getElementById("errormsguser").innerHTML =
                   "user must not be empty.....";
                 }
-                // if (!checkButtonGroup()){
-                //   document.getElementById("errormsggroup").innerHTML =
-                //     "group must not be empty.....";
-                //   }
+                if (!checkButtonGroup()){
+                  document.getElementById("errormsggroup").innerHTML =
+                    "group must not be empty.....";
+                  }
                   if (!myFunPass()){
                     // debugger
                     document.getElementById("password1").innerHTML =
@@ -37,6 +37,10 @@ function checkButtonUser() {
                       document.getElementById("confpass").innerHTML =
                         "confirm password must not be empty.....";
                       }
+                      if (!checkButtonWhat()){
+                        document.getElementById("errormsgwhat").innerHTML =
+                          "what to do next must not be empty.....";
+                        }
 } 
 
 function userValidation() {
@@ -114,107 +118,6 @@ else {
   document.getElementById("error").innerHTML 
       = "Please select atleast one occupation"; 
 }
-
-
-// function checkButtonOccupation() {  
-//   if(document.getElementById('opt-radio01').checked) { 
-//       document.getElementById("disp").innerHTML 
-//           // = document.getElementById("opt-radio01").value 
-//           = "Selected School Students"; 
-//           if (document.getElementById('opt-radio02').checked){
-//             document.getElementById("disp").innerHTML 
-//           // = document.getElementById("opt-radio02").value 
-//           = "Selected University Students";
-//            if(document.getElementById('opt-radio03').checked) { 
-//               document.getElementById("disp").innerHTML 
-//                 // = document.getElementById("opt-radio03").value 
-//                 = "Selected Agriculture";   
-//                 if(document.getElementById('opt-radio04').checked) { 
-//                   document.getElementById("disp").innerHTML 
-//                       // = document.getElementById("opt-radio04").value 
-//                       = "Selected Travel";   
-//                       if(document.getElementById('opt-radio05').checked) { 
-//                         document.getElementById("disp").innerHTML 
-//                             // = document.getElementById("opt-radio05").value 
-//                             = "Selected other";
-                              
-//                     }
-//               }
-//         } 
-//       }
-//   }
-// }
-
-//  function checkButtonOccupation() {  
-//   if(document.getElementById('opt-radio01').checked) { 
-//       document.getElementById("disp").innerHTML 
-//           // = document.getElementById("opt-radio01").value 
-//           = "Selected School Students"; 
-//   } 
-//   else if(document.getElementById('opt-radio02').checked) { 
-//       document.getElementById("disp").innerHTML 
-//           // = document.getElementById("opt-radio02").value 
-//           = "Selected University Students";   
-//   } 
-//   else if(document.getElementById('opt-radio03').checked) { 
-//       document.getElementById("disp").innerHTML 
-//           // = document.getElementById("opt-radio03").value 
-//           = "Selected Agriculture";   
-//   } 
-//   else if(document.getElementById('opt-radio04').checked) { 
-//       document.getElementById("disp").innerHTML 
-//           // = document.getElementById("opt-radio04").value 
-//           = "Selected Travel";   
-//   }
-//   else if(document.getElementById('opt-radio05').checked) { 
-//     document.getElementById("disp").innerHTML 
-//         // = document.getElementById("opt-radio05").value 
-//         = "Selected other";   
-// }
-//   else if(document.getElementById('opt-age-group01').checked) { 
-//         document.getElementById("dis").innerHTML 
-//             // = document.getElementById("opt-radio01").value 
-//             = "Age is under -19"; 
-//     } 
-//     else if(document.getElementById('opt-age-group02').checked) { 
-//         document.getElementById("dis").innerHTML 
-//             // = document.getElementById("opt-radio02").value 
-//             = "Age is between 20 to 29";   
-//     } 
-//     else if(document.getElementById('opt-age-group03').checked) { 
-//         document.getElementById("dis").innerHTML 
-//             // = document.getElementById("opt-radio03").value 
-//             = "Age is between 30 to 39";   
-//     } 
-//     else if(document.getElementById('opt-age-group04').checked) { 
-//         document.getElementById("dis").innerHTML 
-//             // = document.getElementById("opt-radio04").value 
-//             = "Age is between 40 to 49";   
-//     }
-//     else if(document.getElementById('opt-age-group05').checked) { 
-//       document.getElementById("dis").innerHTML 
-//           // = document.getElementById("opt-radio05").value 
-//           = "Age is between 50 to 59";   
-//   }
-//     else if(document.getElementById('opt-age-group06').checked) { 
-//     document.getElementById("dis").innerHTML 
-//         // = document.getElementById("opt-radio05").value 
-//         = "Age is 60 and above 60";   
-//   }
-//     else if(document.getElementById('customCheck').checked) { 
-//     document.getElementById("dis").innerHTML 
-//         // = document.getElementById("opt-radio05").value 
-//         = "Undisclosed Age";   
-//   }
-    
-//   else { 
-//       document.getElementById("error").innerHTML 
-//           = "Please select atleast one occupation"; 
-//   }
-//   else { 
-//     document.getElementById("errormsg").innerHTML 
-//         = "Please select your age"; 
-// } 
 } 
 
 function checkButtonAge() {  
@@ -259,6 +162,8 @@ function checkButtonAge() {
   } 
 } 
 
+
+
 function myFunArea(){
   var a = document.getElementsByClassName('form-checkbox form-checkbox-areas');
   var newvar = 0;
@@ -269,10 +174,12 @@ function myFunArea(){
       
     }
   }
-  if(newvar >= 3){
-    document.getElementById("notvalid").innerHTML = "Please select only two areas"
+  if (newvar<2){
+    document.getElementById("notvalid").innerHTML="Please select minimum two areas";
     return false;
   }
+  else { document.getElementById("notvalid").innerHTML="";}
+    return true;
 }
 
 function checkButtonArea() {  
@@ -426,91 +333,97 @@ function myFunUser(){
       
     }
   }
-  if(newvar > 3){
-    document.getElementById("notvaliduser").innerHTML = "Please select only three users"
+  if (newvar< 3){
+    document.getElementById("notvaliduser").innerHTML="Please select minimum three users";
     return false;
   }
+  else { document.getElementById("notvaliduser").innerHTML="";}
+    return true;
+  // if(newvar < 3){
+  //   document.getElementById("notvaliduser").innerHTML = "Please select minimum three users"
+  //   return false;
+  // }
 }
 
 function checkButtonGroup() {  
-  if(document.getElementById('select-follow-option01').checked) { 
-      document.getElementById("displayuser").innerHTML 
+  if(document.getElementById('select-groups-option01').checked) { 
+      document.getElementById("displaygroup").innerHTML 
           // = document.getElementById("opt-radio01").value 
           = "selected an area"; 
   } 
-  else if(document.getElementById('select-follow-option02').checked) { 
-      document.getElementById("displayuser").innerHTML 
+  else if(document.getElementById('select-groups-option02').checked) { 
+      document.getElementById("displaygroup").innerHTML 
           // = document.getElementById("opt-radio02").value 
           = "selected an area";   
   } 
-  else if(document.getElementById('select-follow-option03').checked) { 
-      document.getElementById("displayuser").innerHTML 
+  else if(document.getElementById('select-groups-option03').checked) { 
+      document.getElementById("displaygroup").innerHTML 
           // = document.getElementById("opt-radio03").value 
           = "selected an area";   
   } 
-  else if(document.getElementById('select-follow-option04').checked) { 
-      document.getElementById("displayuser").innerHTML 
+  else if(document.getElementById('select-groups-option04').checked) { 
+      document.getElementById("displaygroup").innerHTML 
           // = document.getElementById("opt-radio04").value 
           = "selected an area";   
   }
-  else if(document.getElementById('select-follow-option05').checked) { 
-    document.getElementById("displayuser").innerHTML 
+  else if(document.getElementById('select-groups-option05').checked) { 
+    document.getElementById("displaygroup").innerHTML 
         // = document.getElementById("opt-radio05").value 
         = "selected an area";   
 }
-  else if(document.getElementById('select-follow-option06').checked) { 
-  document.getElementById("displayuser").innerHTML 
+  else if(document.getElementById('select-groups-option06').checked) { 
+  document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
       = "selected an area";   
 }
-  else if(document.getElementById('select-follow-option07').checked) { 
-  document.getElementById("displayuser").innerHTML 
+  else if(document.getElementById('select-groups-option07').checked) { 
+  document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
       = "Selected an area";   
 }
-  else if(document.getElementById('select-follow-option08').checked) { 
-  document.getElementById("displayuser").innerHTML 
+  else if(document.getElementById('select-groups-option08').checked) { 
+  document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
       = "Selected an area";   
 }
-  else if(document.getElementById('select-follow-option09').checked) { 
-  document.getElementById("displayuser").innerHTML 
+  else if(document.getElementById('select-groups-option09').checked) { 
+  document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
       = "Selected an area";   
 }
-  else if(document.getElementById('select-follow-option10').checked) { 
-  document.getElementById("displayuser").innerHTML 
+  else if(document.getElementById('select-groups-option10').checked) { 
+  document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
       = "Selected an area";   
 }
-else if(document.getElementById('select-follow-option11').checked) { 
-  document.getElementById("displayuser").innerHTML 
+else if(document.getElementById('select-groups-option11').checked) { 
+  document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
       = "Selected an area";   
 }
-else if(document.getElementById('select-follow-option12').checked) { 
-  document.getElementById("displayuser").innerHTML 
+else if(document.getElementById('select-groups-option12').checked) { 
+  document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
       = "Selected an area";   
 }
-else if(document.getElementById('select-follow-option13').checked) { 
-  document.getElementById("displayuser").innerHTML 
+else if(document.getElementById('select-groups-option13').checked) { 
+  document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
       = "Selected an area";   
 }
-else if(document.getElementById('select-follow-option14').checked) { 
-  document.getElementById("displayuser").innerHTML 
+else if(document.getElementById('select-groups-option14').checked) { 
+  document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
       = "Selected an area";   
 }
-else if(document.getElementById('select-follow-option15').checked) { 
-  document.getElementById("displayuser").innerHTML 
+else if(document.getElementById('select-groups-option15').checked) { 
+  document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
       = "Selected an area";   
 }
   else { 
-      document.getElementById("errormsguser").innerHTML 
-          = "Please select a user"; 
+      document.getElementById("errormsggroup").innerHTML 
+          = "Please select a group"; 
           
   } 
 }
@@ -522,29 +435,56 @@ function myFunGroup(){
   for(count=0; count<a.length ; count++){
     if(a[count].checked == true){
       newvar = newvar+1;
-      return true;
+      
     }
   }
-  if(newvar >= 3){
-    document.getElementById("notvalidgroup").innerHTML = "Please select only two groups"
+  if (newvar<2){
+    document.getElementById("notvalidgroup").innerHTML="Please select minimum two groups";
     return false;
   }
+  else { document.getElementById("notvalidgroup").innerHTML="";}
+    return true;
 }
+
+
+
+// function myFunGroup(){
+//   debugger
+//   var a = document.getElementsByClassName('form-checkbox form-checkbox-groups');
+//   var newvar = 0;
+//   var count;
+//   for(count=0; count<a.length ; count++){
+//     if(a[count].checked == true){
+//       newvar = newvar+1;
+//       return true;
+//     }
+//   }
+//   if (newvar < 2){
+//     document.getElementById("notvalidgroup").innerHTML="Please select minimum two groups";
+//     return false;
+//   }
+//   else { document.getElementById("notvalidgroup").innerHTML="";}
+//     return true;
+//   if(newvar <= 3){
+//     document.getElementById("notvalidgroup").innerHTML = "Please select minimum two groups"
+//     return false;
+//   }
+// }
 
 function myFunPass(){
   // debugger
-  var pw = document.getElementById("password").value;
+  var pass = document.getElementById("password").value;
   var validpass = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/
-  if(pw == "") {  
-    document.getElementById("password1").innerHTML = "**Fill the password please!";  
+  if(pass == "") {  
+    document.getElementById("password1").innerHTML = "**Fill the password please....!!!!!!";  
     return false;  
  }  
- if(pw.length < 8) {  
-  document.getElementById("password1").innerHTML = "**Password length must be atleast 8 characters";  
+ if(pass.length < 8) {  
+  document.getElementById("password1").innerHTML = "**Password length must be atleast 8 characters.....";  
   return false;  
 } 
-if  (!pw.match(validpass)) {
-  document.getElementById("password1").innerHTML = "**password should contain atleast one number and one special character";  
+if  (!pass.match(validpass)) {
+  document.getElementById("password1").innerHTML = "**password should contain atleast one number and one special character......";  
   return false;  
 
 }
@@ -553,11 +493,11 @@ if  (!pw.match(validpass)) {
 // }
 }
 function myFunConPass(){
-  var p1=document.getElementById("password").value;
-var p2=document.getElementById("confirm-password").value;
-console.log(p1+p2)
-if(p1!=p2){
-  document.getElementById("confpass").innerHTML = "**Please enter same password!";
+var pass1=document.getElementById("password").value;
+var pass2=document.getElementById("confirm-password").value;
+
+if(pass1!=pass2){
+  document.getElementById("confpass").innerHTML = "**Please enter same password...!!!!!!";
   return false;
 }
 else{
@@ -603,6 +543,90 @@ function checkButtonWhat() {
 //     return false;
 //   }
 // }
+
+
+const searchFun = () => {
+  let filter = document.getElementById('myInput').value.toUpperCase();
+  let ul = document.getElementById('myBox');
+  let li = ul.getElementsByTagName('li');
+  for ( var i=0 ; i <li.length; i++){
+      let a = li[i].getElementsByTagName('a')[0];
+      let textValue = a.textContent || a.innerHTML;
+      if(textValue.toUpperCase().indexOf(filter) > -1){
+          li[i].style.display = '';
+      }else{
+          li[i].style.display = 'none';
+      }
+  }
+}
+
+const searchFunUser = () => {
+  let filter = document.getElementById('myInputUser').value.toUpperCase();
+  let ul = document.getElementById('myBoxUser');
+  let li = ul.getElementsByTagName('li');
+  for ( var i=0 ; i <li.length; i++){
+      let a = li[i].getElementsByTagName('a')[0];
+      let textValue = a.textContent || a.innerHTML;
+      if(textValue.toUpperCase().indexOf(filter) > -1){
+          li[i].style.display = '';
+      }else{
+          li[i].style.display = 'none';
+      }
+  }
+}
+
+const searchFunGroup = () => {
+  let filter = document.getElementById('myInputGroup').value.toUpperCase();
+  let ul = document.getElementById('myBoxGroup');
+  let li = ul.getElementsByTagName('li');
+  for ( var i=0 ; i <li.length; i++){
+      let a = li[i].getElementsByTagName('a')[0];
+      let textValue = a.textContent || a.innerHTML;
+      if(textValue.toUpperCase().indexOf(filter) > -1){
+          li[i].style.display = '';
+      }else{
+          li[i].style.display = 'none';
+      }
+  }
+}
+
+// const searchInput = document.querySelector("[data-search]")
+// searchInput.addEventListener("input", e =>{
+//   const value = e.target.value.toLowerCase()
+//   user => {
+//     const isvisible =
+//     user.name.toLowerCase().includes(value)
+//     user.element.classList.toggle('hide' , !isvisible)
+//   }
+// })
+
+// const searchFun = () =>{
+//   let filter = document.getElementById('myInput').value.toLowerCase();
+//   // let myBox = document.getElementById('myBox');
+//   user =>{
+//     const isvisible = user.name.toLowerCase().includes(filter);
+//     user.element.classList.toggle("hide" , isvisible)
+//   }
+
+// }
+
+// function searchFun(){
+//   var input, filter, ul, lb, nm, i, txtValue;
+//     input = document.getElementById("myInput");
+//     filter = input.value.toUpperCase();
+//     ul = document.getElementById("myBox");
+//     lb = ul.getElementsByClassName("label-box");
+//     for (i = 0; i < nm.length; i++) {
+//         nm = lb[i].getElementsByClassName("name")[0];
+//         txtValue = nm.textContent || nm.innerText;
+//         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//             lb[i].style.display = "";
+//         } else {
+//             lb[i].style.display = "none";
+//         }
+//     }
+// }
+
 
 function formatoSelect(state) {
   if (!state.id) {

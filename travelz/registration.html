@@ -500,14 +500,15 @@
                                         <div class="row get-row mr-minus-8">
                                             <div class="col-lg-12 col-md-12 plr-8">
                                                 <div class="input-group input-group-30">
-                                                    <input type="text" class="form-control" placeholder="Select Areas to Follow" />
+                                                    <input type="text" class="form-control" id="myInput" name="" placeholder="Select Areas to Follow" onkeyup="searchFun()" />
                                                     <div class="input-group-append">
                                                         <button class="btn btn-success btn-search"><i class="material-icons search-icons"> search </i></button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>        
+                                    </div>   
+                                        
 
                                     <div class="select-img-root most-img-root">
                                         <div class="row get-row mr-minus-8">
@@ -515,11 +516,21 @@
                                                 <div class="heading-h4"><h4>Most popular Area</h4></div>
                                             </div>
                                         </div>
+                                        <!-- <ul id="myBox">
+                                            <li><a href="#">Apple</a></li>
+                                            <li><a href="#">Ball</a></li>
+                                            <li><a href="#">Cat</a></li>
+                                            <li><a href="#">Dog</a></li>
+                                            <li><a href="#">Egg</a></li>
+                                        
+                                        </ul>  -->
+                                        <ul id="myBox">
                                         <div class="row get-row mr-minus-8">
-
+                                            
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box area-card-box">
                                                     <label for="select-area-option01" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -528,17 +539,22 @@
                                                         <div class="img-banner">
                                                             <img src="assets/images/areas/areas-01.jpg" class="img-fluid img-responsive" alt="area" />
                                                         </div>
-                                                        <div class="check-title-row">
-                                                            <h4>Akihabara</h4>
+                                                        <div class="check-title-row" name="Akihabara">
+                                                            <a>Akihabara</a>
+                                                            <!-- <li style="color: white; font-weight:bolder; font-size:16px;"><a>Akihabara</a></li> -->
+                                                            <!-- <h4>Akihabara</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option01" onclick="return myFunArea()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option01" onclick="myFunArea()" />
                                                 </div>
                                             </div>
+                                            
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box area-card-box">
                                                     <label for="select-area-option02" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -547,17 +563,21 @@
                                                         <div class="img-banner">
                                                             <img src="assets/images/areas/areas-02.jpg" class="img-fluid img-responsive" alt="area" />
                                                         </div>
-                                                        <div class="check-title-row">
-                                                            <h4>Asakusa</h4>
+                                                        <div class="check-title-row" name="Asakusa">
+                                                            <a>Asakusa</a>
+                                                            <!-- <li style="color: white; font-weight:bolder; font-size:16px;"><a>Asakusa</a></li> -->
+                                                            <!-- <h4>Asakusa</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option02" onclick="return myFunArea()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option02" onclick="myFunArea()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box area-card-box">
                                                     <label for="select-area-option03" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -567,16 +587,21 @@
                                                             <img src="assets/images/areas/areas-03.jpg" class="img-fluid img-responsive" alt="area" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Harajuku</h4>
+                                                            <a>Harajuku</a>
+                                                            <!-- <li style="color: white; font-weight:bolder; font-size:16px;"><a>Harajuku</a></li> -->
+                                                            <!-- <h4>Harajuku</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option03" onclick="return myFunArea()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option03" onclick="myFunArea()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box area-card-box">
+                                                    
                                                     <label for="select-area-option04" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -586,16 +611,21 @@
                                                             <img src="assets/images/areas/areas-04.jpg" class="img-fluid img-responsive" alt="area" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Shibuya</h4>
+                                                            <a>Shibuya</a>
+                                                            <!-- <li style="color: white; font-weight:bolder; font-size:16px;"><a>Shibuya</a></li> -->
+                                                            <!-- <h4>Shibuya</h4> -->
                                                         </div>
+                                                    </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option04" onclick="return myFunArea()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option04" onclick="myFunArea()" />
+                                                    
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box area-card-box">
                                                     <label for="select-area-option05" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -605,16 +635,20 @@
                                                             <img src="assets/images/areas/areas-05.jpg" class="img-fluid img-responsive" alt="area" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Ueno</h4>
+                                                            <a>Ueno</a>
+                                                            <!-- <li style="color: white; font-weight:bolder; font-size:16px;"><a>Ueno</a></li> -->
+                                                            <!-- <h4>Ueno</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option05" onclick="return myFunArea()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option05" onclick="myFunArea()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box area-card-box">
                                                     <label for="select-area-option06" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -624,16 +658,20 @@
                                                             <img src="assets/images/areas/areas-06.jpg" class="img-fluid img-responsive" alt="area" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Akihabara</h4>
+                                                            <a>Akihabara</a>
+                                                            <!-- <li style="color: white; font-weight:bolder; font-size:16px;"><a>Akihabara</a></li> -->
+                                                            <!-- <h4>Akihabara</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option06" onclick="return myFunArea()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option06" onclick="myFunArea()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box area-card-box">
                                                     <label for="select-area-option07" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -643,16 +681,20 @@
                                                             <img src="assets/images/areas/areas-07.jpg" class="img-fluid img-responsive" alt="area" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Asakusa</h4>
+                                                            <a>Asakusa</a>
+                                                            <!-- <li style="color: white; font-weight:bolder; font-size:16px;"><a>Asakusa</a></li> -->
+                                                            <!-- <h4>Asakusa</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option07" onclick="return myFunArea()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option07" onclick="myFunArea()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box area-card-box">
                                                     <label for="select-area-option08" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -662,16 +704,22 @@
                                                             <img src="assets/images/areas/areas-08.jpg" class="img-fluid img-responsive" alt="area" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Harajuku</h4>
+                                                            <a>Harajuku</a>
+                                                            <!-- <li style="color: white; font-weight:bolder; font-size:16px;"><a>Harajuku</a></li> -->
+                                                            <!-- <h4>Harajuku</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option08" onclick="return myFunArea()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option08" onclick="myFunArea()" />
                                                 </div>
                                             </div>
-
+                                            
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                                
                                                 <div class="img-checkbox-card-box area-card-box">
+                                                    
                                                     <label for="select-area-option09" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -681,16 +729,23 @@
                                                             <img src="assets/images/areas/areas-09.jpg" class="img-fluid img-responsive" alt="area" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Shibuya</h4>
+                                                            <a>Shibuya</a>
+                                                            <!-- <li style="color: white; font-weight:bolder; font-size:16px;"><a>Shibuya</a></li> -->
+                                                            <!-- <h4>Shibuya</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option09" onclick="return myFunArea()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option09" onclick="myFunArea()" />
+                                                
                                                 </div>
+                                            
                                             </div>
+                                            
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box area-card-box">
                                                     <label for="select-area-option10" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -700,10 +755,13 @@
                                                             <img src="assets/images/areas/areas-10.jpg" class="img-fluid img-responsive" alt="area" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Ueno</h4>
+                                                            <a>Ueno</a>
+                                                            <!-- <li style="color: white; font-weight:bolder; font-size:16px;"><a>Ueno</a></li> -->
+                                                            <!-- <h4>Ueno</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option10" onclick="return myFunArea()"  />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option10" onclick="myFunArea()"  />
                                                 </div>
                                             </div>
                                             <div>
@@ -714,7 +772,25 @@
                                             <!-- <div class="errorarea">
                                                 Select minimum 2 checkbox
                                             </div> -->
+                                         
                                         </div>
+                                    </ul>
+                                        <!-- <script>
+                                            const searchFun = () => {
+                                                let filter = document.getElementById('myInput').value.toUpperCase();
+                                                let ul = document.getElementById('myBox');
+                                                let li = ul.getElementsByTagName('li');
+                                                for ( var i=0 ; i <li.length; i++){
+                                                    let a = li[i].getElementsByTagName('a')[0];
+                                                    let textValue = a.textContent || a.innerHTML;
+                                                    if(textValue.toUpperCase().indexOf(filter) > -1){
+                                                        li[i].style.display = '';
+                                                    }else{
+                                                        li[i].style.display = 'none';
+                                                    }
+                                                }
+                                            }
+                                        </script> -->
                                     </div>
                                     <div>
                                         <h3 id="displayarea" style= "color:green"> </h3>
@@ -795,7 +871,7 @@
                                         <div class="row get-row mr-minus-8">
                                             <div class="col-lg-12 col-md-12 plr-8">
                                                 <div class="input-group input-group-30">
-                                                    <input type="text" class="form-control" placeholder="Select User to Follow" />
+                                                    <input type="text" class="form-control" placeholder="Select User to Follow" id="myInputUser" onkeyup="searchFunUser()" />
                                                     <div class="input-group-append">
                                                         <button class="btn btn-success btn-search"><i class="material-icons search-icons"> search </i></button>
                                                     </div>
@@ -810,11 +886,13 @@
                                                 <div class="heading-h4"><h4>Most popular User</h4></div>
                                             </div>
                                         </div>
+                                        <ul id="myBoxUser">
                                         <div class="row get-row mr-minus-8">
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="user-card-box follow-card-box">
                                                     <label for="select-follow-option01" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -824,17 +902,21 @@
                                                             <img src="assets/images/user/user1.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>sunny</h4>
-                                                            <p>sunnymint@gmail.com</p>
+                                                            <a><h4>sunny</h4></a>
+                                                            <a><p>sunnymint@gmail.com</p></a>
+                                                            <!-- <h4>sunny</h4> -->
+                                                            
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option01" onclick="return myFunUser()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option01" onclick="myFunUser()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="user-card-box follow-card-box">
                                                     <label for="select-follow-option02" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -844,17 +926,21 @@
                                                             <img src="assets/images/user/user2.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Montes</h4>
-                                                            <p>montes@gmail.com</p>
+                                                            <a><h4>Montes</h4></a>
+                                                            <a><p>montes@gmail.com</p></a>
+                                                            <!-- <h4>Montes</h4>
+                                                            <p>montes@gmail.com</p> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option02" onclick="return myFunUser()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option02" onclick="myFunUser()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="user-card-box follow-card-box">
                                                     <label for="select-follow-option03" class="label-box">
+                                                        <li>
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -864,17 +950,21 @@
                                                             <img src="assets/images/user/user3.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Nathanael</h4>
-                                                            <p>nathanael@gmail.com</p>
+                                                            <a><h4>Nathanael</h4></a>
+                                                            <a><p>nathanael@gmail.com</p></a>
+                                                            <!-- <h4>Nathanael</h4> -->
+                                                            <!-- <p>nathanael@gmail.com</p> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option03" onclick="return myFunUser()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option03" onclick="myFunUser()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="user-card-box follow-card-box">
                                                     <label for="select-follow-option04" class="label-box">
+                                                        <li>
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -884,17 +974,21 @@
                                                             <img src="assets/images/user/user4.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Rivera</h4>
-                                                            <p>rivera@gmail.com</p>
+                                                            <a><h4>Rivera</h4></a>
+                                                            <a><p>rivera@gmail.com</p></a>
+                                                            <!-- <h4>Rivera</h4> -->
+                                                            <!-- <p>rivera@gmail.com</p> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option04" onclick="return myFunUser()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option04" onclick="myFunUser()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="user-card-box follow-card-box">
                                                     <label for="select-follow-option05" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -904,17 +998,21 @@
                                                             <img src="assets/images/user/user5.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Antwan</h4>
-                                                            <p>antwan@gmail.com</p>
+                                                            <a><h4>Antwan</h4></a>
+                                                            <a><p>antwan@gmail.com</p></a>
+                                                            <!-- <h4>Antwan</h4> -->
+                                                            <!-- <p>antwan@gmail.com</p> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option05" onclick="return myFunUser()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option05" onclick="myFunUser()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="user-card-box follow-card-box">
                                                     <label for="select-follow-option06" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -924,17 +1022,21 @@
                                                             <img src="assets/images/user/user6.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Camacho</h4>
-                                                            <p>camacho@gmail.com</p>
+                                                            <a><h4>Camacho</h4></a>
+                                                            <a><p>camacho@gmail.com</p></a>
+                                                            <!-- <h4>Camacho</h4> -->
+                                                            <!-- <p>camacho@gmail.com</p> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option06" onclick="return myFunUser()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option06" onclick="myFunUser()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="user-card-box follow-card-box">
                                                     <label for="select-follow-option07" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -944,17 +1046,21 @@
                                                             <img src="assets/images/user/user7.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Janette</h4>
-                                                            <p>janette@gmail.com</p>
+                                                            <a><h4>Janette</h4></a>
+                                                            <a><p>janette@gmail.com</p></a>
+                                                            <!-- <h4>Janette</h4> -->
+                                                            <!-- <p>janette@gmail.com</p> -->
                                                         </div>
+                                                        </li> 
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option07" onclick="return myFunUser()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option07" onclick="myFunUser()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="user-card-box follow-card-box">
                                                     <label for="select-follow-option08" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -964,17 +1070,21 @@
                                                             <img src="assets/images/user/user8.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Thompson</h4>
-                                                            <p>thompson@gmail.com</p>
+                                                            <a><h4>Thompson</h4></a>
+                                                            <a><p>thompson@gmail.com</p></a>
+                                                            <!-- <h4>Thompson</h4> -->
+                                                            <!-- <p>thompson@gmail.com</p> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option08" onclick="return myFunUser()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option08" onclick="myFunUser()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="user-card-box follow-card-box">
                                                     <label for="select-follow-option09" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -984,17 +1094,21 @@
                                                             <img src="assets/images/user/user9.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Spears</h4>
-                                                            <p>spears@gmail.com</p>
+                                                            <a><h4>Spears</h4></a>
+                                                            <a><p>spears@gmail.com</p></a>
+                                                            <!-- <h4>Spears</h4> -->
+                                                            <!-- <p>spears@gmail.com</p> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option09" onclick="return myFunUser()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option09" onclick="myFunUser()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="user-card-box follow-card-box">
                                                     <label for="select-follow-option10" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1004,17 +1118,21 @@
                                                             <img src="assets/images/user/user10.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Pope</h4>
-                                                            <p>pope@gmail.com</p>
+                                                            <a><h4>Pope</h4></a>
+                                                            <a><p>pope@gmail.com</p></a>
+                                                            <!-- <h4>Pope</h4> -->
+                                                            <!-- <p>pope@gmail.com</p> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option10" onclick="return myFunUser()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option10" onclick="myFunUser()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="user-card-box follow-card-box">
                                                     <label for="select-follow-option11" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1024,17 +1142,21 @@
                                                             <img src="assets/images/user/user9.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Gordon</h4>
-                                                            <p>gordon@gmail.com</p>
+                                                            <a><h4>Gordon</h4></a>
+                                                            <a><p>gordon@gmail.com</p></a>
+                                                            <!-- <h4>Gordon</h4> -->
+                                                            <!-- <p>gordon@gmail.com</p> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option11" onclick="return myFunUser()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option11" onclick="myFunUser()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="user-card-box follow-card-box">
                                                     <label for="select-follow-option12" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1044,17 +1166,21 @@
                                                             <img src="assets/images/user/user4.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Valenzuela</h4>
-                                                            <p>valenzuela@gmail.com</p>
+                                                            <a><h4>Valenzuela</h4></a>
+                                                            <a><p>valenzuela@gmail.com</p></a>
+                                                            <!-- <h4>Valenzuela</h4> -->
+                                                            <!-- <p>valenzuela@gmail.com</p> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option12" onclick="return myFunUser()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option12" onclick="myFunUser()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="user-card-box follow-card-box">
                                                     <label for="select-follow-option13" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1064,17 +1190,21 @@
                                                             <img src="assets/images/user/user1.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Delgado</h4>
-                                                            <p>delgado@gmail.com</p>
+                                                            <a><h4>Delgado</h4></a>
+                                                            <a><p>delgado@gmail.com</p></a>
+                                                            <!-- <h4>Delgado</h4> -->
+                                                            <!-- <p>delgado@gmail.com</p> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option13" onclick="return myFunUser()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option13" onclick="myFunUser()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="user-card-box follow-card-box">
                                                     <label for="select-follow-option14" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1084,17 +1214,21 @@
                                                             <img src="assets/images/user/user5.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Jenkins</h4>
-                                                            <p>jenkins@gmail.com</p>
+                                                            <a><h4>Jenkins</h4></a>
+                                                            <a><p>jenkins@gmail.com</p></a>
+                                                            <!-- <h4>Jenkins</h4> -->
+                                                            <!-- <p>jenkins@gmail.com</p> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option14" onclick="return myFunUser()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option14" onclick="myFunUser()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="user-card-box follow-card-box">
                                                     <label for="select-follow-option15" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1104,11 +1238,14 @@
                                                             <img src="assets/images/user/user2.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Vargas</h4>
-                                                            <p>vargas@gmail.com</p>
+                                                            <a><h4>Vargas</h4></a>
+                                                            <a><p>vargas@gmail.com</p></a>
+                                                            <!-- <h4>Vargas</h4> -->
+                                                            <!-- <p>vargas@gmail.com</p> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option15" onclick="return myFunUser()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option15" onclick="myFunUser()" />
                                                 </div>
                                             </div>
                                             <div>
@@ -1118,6 +1255,7 @@
                                             </div>
 
                                         </div>
+                                        </ul>
                                     </div>
                                     <div>
                                         <h3 id="displayuser" style= "color:green"> </h3>
@@ -1174,7 +1312,7 @@
                                         <div class="row get-row mr-minus-8">
                                             <div class="col-lg-12 col-md-12 plr-8">
                                                 <div class="input-group input-group-30">
-                                                    <input type="text" class="form-control" placeholder="Select Group to Follow" />
+                                                    <input type="text" class="form-control" placeholder="Select Group to Follow" id="myInputGroup" onkeyup="searchFunGroup()" />
                                                     <div class="input-group-append">
                                                         <button class="btn btn-success btn-search"><i class="material-icons search-icons"> search </i></button>
                                                     </div>
@@ -1189,11 +1327,13 @@
                                                 <div class="heading-h4"><h4>Most popular Groups</h4></div>
                                             </div>
                                         </div>
+                                        <ul id="myBoxGroup">
                                         <div class="row get-row mr-minus-8">
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box groups-card-box">
                                                     <label for="select-groups-option01" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1203,16 +1343,19 @@
                                                             <img src="assets/images/groups/groups01.jpg" class="img-fluid img-responsive" alt="groups" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Akihabara</h4>
+                                                            <a>Akihabara</a>
+                                                            <!-- <h4>Akihabara</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option01" onclick="return myFunGroup()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option01" onclick="myFunGroup()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box groups-card-box">
                                                     <label for="select-groups-option02" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1222,16 +1365,19 @@
                                                             <img src="assets/images/groups/groups02.jpg" class="img-fluid img-responsive" alt="groups" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Asakusa</h4>
+                                                            <a>Asakusa</a>
+                                                            <!-- <h4>Asakusa</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option02" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option02" onclick="myFunGroup()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box groups-card-box">
                                                     <label for="select-groups-option03" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1241,16 +1387,19 @@
                                                             <img src="assets/images/groups/groups03.jpg" class="img-fluid img-responsive" alt="groups" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Harajuku</h4>
+                                                            <a>Harajuku</a>
+                                                            <!-- <h4>Harajuku</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option03" onclick="return myFunGroup()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option03" onclick="myFunGroup()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box groups-card-box">
                                                     <label for="select-groups-option04" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1260,16 +1409,19 @@
                                                             <img src="assets/images/groups/groups04.jpg" class="img-fluid img-responsive" alt="groups" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Shibuya</h4>
+                                                            <a>Shibuya</a>
+                                                            <!-- <h4>Shibuya</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option04" onclick="return myFunGroup()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option04" onclick="myFunGroup()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box groups-card-box">
                                                     <label for="select-groups-option05" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1279,16 +1431,19 @@
                                                             <img src="assets/images/groups/groups05.jpg" class="img-fluid img-responsive" alt="groups" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Ueno</h4>
+                                                            <a>Ueno</a>
+                                                            <!-- <h4>Ueno</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option05" onclick="return myFunGroup()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option05" onclick="myFunGroup()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box groups-card-box">
                                                     <label for="select-groups-option06" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1298,16 +1453,19 @@
                                                             <img src="assets/images/groups/groups06.jpg" class="img-fluid img-responsive" alt="groups" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Akihabara</h4>
+                                                            <a>Akihabara</a>
+                                                            <!-- <h4>Akihabara</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option06" onclick="return myFunGroup()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option06" onclick="myFunGroup()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box groups-card-box">
                                                     <label for="select-groups-option07" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1317,17 +1475,20 @@
                                                             <img src="assets/images/groups/groups07.jpg" class="img-fluid img-responsive" alt="groups" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Asakusa</h4>
+                                                            <a>Asakusa</a>
+                                                            <!-- <h4>Asakusa</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
                                                     <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option07"
-                                                    onclick="return myFunGroup()" />
+                                                    onclick="myFunGroup()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box groups-card-box">
                                                     <label for="select-groups-option08" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1337,16 +1498,19 @@
                                                             <img src="assets/images/groups/groups08.jpg" class="img-fluid img-responsive" alt="groups" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Harajuku</h4>
+                                                            <a>Harajuku</a>
+                                                            <!-- <h4>Harajuku</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option08" onclick="return myFunGroup()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option08" onclick="myFunGroup()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box groups-card-box">
                                                     <label for="select-groups-option09" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1356,16 +1520,19 @@
                                                             <img src="assets/images/groups/groups09.jpg" class="img-fluid img-responsive" alt="groups" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Shibuya</h4>
+                                                            <a>Shibuya</a>
+                                                            <!-- <h4>Shibuya</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option09" onclick="return myFunGroup()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option09" onclick="myFunGroup()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box groups-card-box">
                                                     <label for="select-groups-option10" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1375,16 +1542,19 @@
                                                             <img src="assets/images/groups/groups10.jpg" class="img-fluid img-responsive" alt="groups" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Ueno</h4>
+                                                            <a>Ueno</a>
+                                                            <!-- <h4>Ueno</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option10" onclick="return myFunGroup()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option10" onclick="myFunGroup()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box groups-card-box">
                                                     <label for="select-groups-option11" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1394,16 +1564,19 @@
                                                             <img src="assets/images/groups/groups11.jpg" class="img-fluid img-responsive" alt="groups" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Akihabara</h4>
+                                                            <a>Akihabara</a>
+                                                            <!-- <h4>Akihabara</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option11" onclick="return myFunGroup()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option11" onclick="myFunGroup()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box groups-card-box">
                                                     <label for="select-groups-option12" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1413,16 +1586,19 @@
                                                             <img src="assets/images/groups/groups12.jpg" class="img-fluid img-responsive" alt="groups" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Asakusa</h4>
+                                                            <a>Asakusa</a>
+                                                            <!-- <h4>Asakusa</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option12" onclick="return myFunGroup()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option12" onclick="myFunGroup()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box groups-card-box">
                                                     <label for="select-groups-option13" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1432,16 +1608,19 @@
                                                             <img src="assets/images/groups/groups13.jpg" class="img-fluid img-responsive" alt="groups" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Harajuku</h4>
+                                                            <a>Harajuku</a>
+                                                            <!-- <h4>Harajuku</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option13" onclick="return myFunGroup()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option13" onclick="myFunGroup()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box groups-card-box">
                                                     <label for="select-groups-option14" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1451,16 +1630,19 @@
                                                             <img src="assets/images/groups/groups14.jpg" class="img-fluid img-responsive" alt="groups" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Shibuya</h4>
+                                                            <a>Shibuya</a>
+                                                            <!-- <h4>Shibuya</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option14" onclick="return myFunGroup()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option14" onclick="myFunGroup()" />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
                                                 <div class="img-checkbox-card-box groups-card-box">
                                                     <label for="select-groups-option15" class="label-box">
+                                                        <li style="color: white; font-weight:bolder; font-size:16px;">
                                                         <div class="check-box-position">
                                                             <button class="checkbox-round-div">
                                                                 <i class="fe fe-check fe-custom"></i>
@@ -1470,10 +1652,12 @@
                                                             <img src="assets/images/groups/groups15.jpg" class="img-fluid img-responsive" alt="groups" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>Ueno</h4>
+                                                            <a>Ueno</a>
+                                                            <!-- <h4>Ueno</h4> -->
                                                         </div>
+                                                        </li>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option15" onclick="return myFunGroup()" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option15" onclick="myFunGroup()" />
                                                 </div>
                                             </div>
                                             <div>
@@ -1483,6 +1667,12 @@
                                             </div>
 
                                         </div>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 id="displaygroup" style= "color:green"> </h3>
+                                        <h4 id="errormsggroup" style= "color:red"> </h4>
+
                                     </div>
 
                                 </div>
