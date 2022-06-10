@@ -3024,3 +3024,9 @@ header .header-div .logo-div .logo_link {
 #notvalidwhat{
   color: red;
 }
+.sticky-div{
+  background-color: aqua;
+  position: sticky;
+  top: 0px;
+  padding: 10px 0px;
+}

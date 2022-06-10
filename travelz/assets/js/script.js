@@ -38,10 +38,12 @@ function checkButtonUser() {
                         "confirm password must not be empty.....";
                       }
                       if (!checkButtonWhat()){
+                        debugger
                         document.getElementById("errormsgwhat").innerHTML =
                           "what to do next must not be empty.....";
                         }
 } 
+
 
 function userValidation() {
   var username = document.getElementById("user_field").value;
@@ -93,30 +95,41 @@ function emailValidation() {
       document.getElementById("disp").innerHTML 
           // = document.getElementById("opt-radio01").value 
           = "Selected School Students"; 
+          document.getElementById("error").innerHTML = ""
+          return true;
   } 
   else if(document.getElementById('opt-radio02').checked) { 
       document.getElementById("disp").innerHTML 
           // = document.getElementById("opt-radio02").value 
-          = "Selected University Students";   
+          = "Selected University Students";
+          document.getElementById("error").innerHTML = ""
+          return true;   
   } 
   else if(document.getElementById('opt-radio03').checked) { 
       document.getElementById("disp").innerHTML 
           // = document.getElementById("opt-radio03").value 
           = "Selected Agriculture";   
+          document.getElementById("error").innerHTML = ""
+          return true;
   } 
   else if(document.getElementById('opt-radio04').checked) { 
       document.getElementById("disp").innerHTML 
           // = document.getElementById("opt-radio04").value 
           = "Selected Travel";   
+          document.getElementById("error").innerHTML = ""
+          return true;
   }
   else if(document.getElementById('opt-radio05').checked) { 
     document.getElementById("disp").innerHTML 
         // = document.getElementById("opt-radio05").value 
-        = "Selected other";   
+        = "Selected other";
+        document.getElementById("error").innerHTML = ""
+        return true;   
 }
 else { 
   document.getElementById("error").innerHTML 
-      = "Please select atleast one occupation"; 
+      = "Please select atleast one occupation";
+       
 }
 } 
 
@@ -125,36 +138,50 @@ function checkButtonAge() {
       document.getElementById("dis").innerHTML 
           // = document.getElementById("opt-radio01").value 
           = "Age is under -19"; 
+          document.getElementById("errormsg").innerHTML = ""
+          return true;
   } 
   else if(document.getElementById('opt-age-group02').checked) { 
       document.getElementById("dis").innerHTML 
           // = document.getElementById("opt-radio02").value 
           = "Age is between 20 to 29";   
+          document.getElementById("errormsg").innerHTML = ""
+          return true;
   } 
   else if(document.getElementById('opt-age-group03').checked) { 
       document.getElementById("dis").innerHTML 
           // = document.getElementById("opt-radio03").value 
           = "Age is between 30 to 39";   
+          document.getElementById("errormsg").innerHTML = ""
+          return true;
   } 
   else if(document.getElementById('opt-age-group04').checked) { 
       document.getElementById("dis").innerHTML 
           // = document.getElementById("opt-radio04").value 
-          = "Age is between 40 to 49";   
+          = "Age is between 40 to 49"; 
+          document.getElementById("errormsg").innerHTML = ""
+          return true;  
   }
   else if(document.getElementById('opt-age-group05').checked) { 
     document.getElementById("dis").innerHTML 
         // = document.getElementById("opt-radio05").value 
         = "Age is between 50 to 59";   
+        document.getElementById("errormsg").innerHTML = ""
+        return true;
 }
   else if(document.getElementById('opt-age-group06').checked) { 
   document.getElementById("dis").innerHTML 
       // = document.getElementById("opt-radio05").value 
       = "Age is 60 and above 60";   
+      document.getElementById("errormsg").innerHTML = ""
+      return true;
 }
   else if(document.getElementById('customCheck').checked) { 
   document.getElementById("dis").innerHTML 
       // = document.getElementById("opt-radio05").value 
       = "Undisclosed Age";   
+      document.getElementById("errormsg").innerHTML = ""
+      return true;
 }
   else { 
       document.getElementById("errormsg").innerHTML 
@@ -183,59 +210,80 @@ function myFunArea(){
 }
 
 function checkButtonArea() {  
-  if(document.getElementById('select-area-option01').checked || document.getElementById('select-area-option02').checked ) { 
+  if(document.getElementById('select-area-option01').checked) { 
       document.getElementById("displayarea").innerHTML 
           // = document.getElementById("opt-radio01").value 
-          = "selected an area"; 
+          = "selected an area";
+          document.getElementById("errormsgarea").innerHTML = ""
+          return true;
   } 
   else if(document.getElementById('select-area-option02').checked) { 
       document.getElementById("displayarea").innerHTML 
           // = document.getElementById("opt-radio02").value 
           = "selected an area";   
+          document.getElementById("errormsgarea").innerHTML = ""
+          return true;
   } 
   else if(document.getElementById('select-area-option03').checked) { 
       document.getElementById("displayarea").innerHTML 
           // = document.getElementById("opt-radio03").value 
           = "selected an area";   
+          document.getElementById("errormsgarea").innerHTML = ""
+          return true;
   } 
   else if(document.getElementById('select-area-option04').checked) { 
       document.getElementById("displayarea").innerHTML 
           // = document.getElementById("opt-radio04").value 
           = "selected an area";   
+          document.getElementById("errormsgarea").innerHTML = ""
+          return true;
   }
   else if(document.getElementById('select-area-option05').checked) { 
     document.getElementById("displayarea").innerHTML 
         // = document.getElementById("opt-radio05").value 
         = "selected an area";   
+        document.getElementById("errormsgarea").innerHTML = ""
+        return true;
 }
   else if(document.getElementById('select-area-option06').checked) { 
   document.getElementById("displayarea").innerHTML 
       // = document.getElementById("opt-radio05").value 
       = "selected an area";   
+      document.getElementById("errormsgarea").innerHTML = ""
+      return true;
 }
   else if(document.getElementById('select-area-option07').checked) { 
   document.getElementById("displayarea").innerHTML 
       // = document.getElementById("opt-radio05").value 
       = "Selected an area";   
+      document.getElementById("errormsgarea").innerHTML = ""
+      return true;
 }
   else if(document.getElementById('select-area-option08').checked) { 
   document.getElementById("displayarea").innerHTML 
       // = document.getElementById("opt-radio05").value 
       = "Selected an area";   
+      document.getElementById("errormsgarea").innerHTML = ""
+      return true;
 }
   else if(document.getElementById('select-area-option09').checked) { 
   document.getElementById("displayarea").innerHTML 
       // = document.getElementById("opt-radio05").value 
       = "Selected an area";   
+      document.getElementById("errormsgarea").innerHTML = ""
+      return true;
 }
   else if(document.getElementById('select-area-option10').checked) { 
   document.getElementById("displayarea").innerHTML 
       // = document.getElementById("opt-radio05").value 
       = "Selected an area";   
+      document.getElementById("errormsgarea").innerHTML = ""
+      return true;
 }
   else { 
       document.getElementById("errormsgarea").innerHTML 
           = "Please select an area"; 
+          
   } 
 }
 
@@ -243,77 +291,107 @@ function checkButtonUsergroup() {
   if(document.getElementById('select-follow-option01').checked) { 
       document.getElementById("displayuser").innerHTML 
           // = document.getElementById("opt-radio01").value 
-          = "selected an area"; 
+          = "selected a user"; 
+          document.getElementById("errormsguser").innerHTML=""
+          return true;
   } 
   else if(document.getElementById('select-follow-option02').checked) { 
       document.getElementById("displayuser").innerHTML 
           // = document.getElementById("opt-radio02").value 
-          = "selected an area";   
+          = "selected a user";   
+          document.getElementById("errormsguser").innerHTML = ""
+          return true;
   } 
   else if(document.getElementById('select-follow-option03').checked) { 
       document.getElementById("displayuser").innerHTML 
           // = document.getElementById("opt-radio03").value 
-          = "selected an area";   
+          = "selected a user";   
+          document.getElementById("errormsguser").innerHTML = ""
+          return true; 
   } 
   else if(document.getElementById('select-follow-option04').checked) { 
       document.getElementById("displayuser").innerHTML 
           // = document.getElementById("opt-radio04").value 
-          = "selected an area";   
+          = "selected a user";   
+          document.getElementById("errormsguser").innerHTML = ""
+          return true;
   }
   else if(document.getElementById('select-follow-option05').checked) { 
     document.getElementById("displayuser").innerHTML 
         // = document.getElementById("opt-radio05").value 
-        = "selected an area";   
+        = "selected a user";   
+        document.getElementById("errormsguser").innerHTML = ""
+          return true;
 }
   else if(document.getElementById('select-follow-option06').checked) { 
   document.getElementById("displayuser").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "selected an area";   
+      = "selected a user";   
+      document.getElementById("errormsguser").innerHTML = ""
+          return true;
 }
   else if(document.getElementById('select-follow-option07').checked) { 
   document.getElementById("displayuser").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "Selected an area";   
+      = "selected a user";   
+      document.getElementById("errormsguser").innerHTML = ""
+          return true;
 }
   else if(document.getElementById('select-follow-option08').checked) { 
   document.getElementById("displayuser").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "Selected an area";   
+      = "selected a user";   
+      document.getElementById("errormsguser").innerHTML = ""
+          return true;   
 }
   else if(document.getElementById('select-follow-option09').checked) { 
   document.getElementById("displayuser").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "Selected an area";   
+      = "selected a user";   
+      document.getElementById("errormsguser").innerHTML = ""
+          return true;
 }
   else if(document.getElementById('select-follow-option10').checked) { 
   document.getElementById("displayuser").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "Selected an area";   
+      = "selected a user";   
+      document.getElementById("errormsguser").innerHTML = ""
+          return true;  
 }
 else if(document.getElementById('select-follow-option11').checked) { 
   document.getElementById("displayuser").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "Selected an area";   
+      = "selected a user";   
+      document.getElementById("errormsguser").innerHTML = ""
+          return true;
 }
 else if(document.getElementById('select-follow-option12').checked) { 
   document.getElementById("displayuser").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "Selected an area";   
+      = "selected a user";   
+      document.getElementById("errormsguser").innerHTML = ""
+          return true;
 }
 else if(document.getElementById('select-follow-option13').checked) { 
   document.getElementById("displayuser").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "Selected an area";   
+      = "selected a user";   
+      document.getElementById("errormsguser").innerHTML = ""
+          return true;
 }
 else if(document.getElementById('select-follow-option14').checked) { 
   document.getElementById("displayuser").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "Selected an area";   
+      = "selected a user";   
+      document.getElementById("errormsguser").innerHTML = ""
+          return true; 
 }
 else if(document.getElementById('select-follow-option15').checked) { 
   document.getElementById("displayuser").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "Selected an area";   
+      = "selected a user";   
+      document.getElementById("errormsguser").innerHTML = ""
+          return true;
 }
   else { 
       document.getElementById("errormsguser").innerHTML 
@@ -349,77 +427,107 @@ function checkButtonGroup() {
   if(document.getElementById('select-groups-option01').checked) { 
       document.getElementById("displaygroup").innerHTML 
           // = document.getElementById("opt-radio01").value 
-          = "selected an area"; 
+          = "selected a group"; 
+          document.getElementById("errormsggroup").innerHTML = ""
+          return true;
   } 
   else if(document.getElementById('select-groups-option02').checked) { 
       document.getElementById("displaygroup").innerHTML 
           // = document.getElementById("opt-radio02").value 
-          = "selected an area";   
+          = "selected a group"; 
+          document.getElementById("errormsggroup").innerHTML = ""
+          return true;
   } 
   else if(document.getElementById('select-groups-option03').checked) { 
       document.getElementById("displaygroup").innerHTML 
           // = document.getElementById("opt-radio03").value 
-          = "selected an area";   
+          = "selected a group"; 
+          document.getElementById("errormsggroup").innerHTML = ""
+          return true;
   } 
   else if(document.getElementById('select-groups-option04').checked) { 
       document.getElementById("displaygroup").innerHTML 
           // = document.getElementById("opt-radio04").value 
-          = "selected an area";   
+          = "selected a group"; 
+          document.getElementById("errormsggroup").innerHTML = ""
+          return true;
   }
   else if(document.getElementById('select-groups-option05').checked) { 
     document.getElementById("displaygroup").innerHTML 
         // = document.getElementById("opt-radio05").value 
-        = "selected an area";   
+        = "selected a group"; 
+          document.getElementById("errormsggroup").innerHTML = ""
+          return true;
 }
   else if(document.getElementById('select-groups-option06').checked) { 
   document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "selected an area";   
+      = "selected a group"; 
+          document.getElementById("errormsggroup").innerHTML = ""
+          return true;
 }
   else if(document.getElementById('select-groups-option07').checked) { 
   document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "Selected an area";   
+      = "selected a group"; 
+          document.getElementById("errormsggroup").innerHTML = ""
+          return true;
 }
   else if(document.getElementById('select-groups-option08').checked) { 
   document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "Selected an area";   
+      = "selected a group"; 
+          document.getElementById("errormsggroup").innerHTML = ""
+          return true;
 }
   else if(document.getElementById('select-groups-option09').checked) { 
   document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "Selected an area";   
+      = "selected a group"; 
+          document.getElementById("errormsggroup").innerHTML = ""
+          return true;
 }
   else if(document.getElementById('select-groups-option10').checked) { 
   document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "Selected an area";   
+      = "selected a group"; 
+          document.getElementById("errormsggroup").innerHTML = ""
+          return true;
 }
 else if(document.getElementById('select-groups-option11').checked) { 
   document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "Selected an area";   
+      = "selected a group"; 
+          document.getElementById("errormsggroup").innerHTML = ""
+          return true;
 }
 else if(document.getElementById('select-groups-option12').checked) { 
   document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "Selected an area";   
+      = "selected a group"; 
+          document.getElementById("errormsggroup").innerHTML = ""
+          return true;
 }
 else if(document.getElementById('select-groups-option13').checked) { 
   document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "Selected an area";   
+      = "selected a group"; 
+          document.getElementById("errormsggroup").innerHTML = ""
+          return true;
 }
 else if(document.getElementById('select-groups-option14').checked) { 
   document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "Selected an area";   
+      = "selected a group"; 
+          document.getElementById("errormsggroup").innerHTML = ""
+          return true;
 }
 else if(document.getElementById('select-groups-option15').checked) { 
   document.getElementById("displaygroup").innerHTML 
       // = document.getElementById("opt-radio05").value 
-      = "Selected an area";   
+      = "selected a group"; 
+          document.getElementById("errormsggroup").innerHTML = ""
+          return true;
 }
   else { 
       document.getElementById("errormsggroup").innerHTML 
@@ -476,17 +584,25 @@ function myFunPass(){
   var pass = document.getElementById("password").value;
   var validpass = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/
   if(pass == "") {  
-    document.getElementById("password1").innerHTML = "**Fill the password please....!!!!!!";  
+    document.getElementById("password1").innerHTML = "Fill the password please....!!!!!!"; 
+    
     return false;  
  }  
  if(pass.length < 8) {  
-  document.getElementById("password1").innerHTML = "**Password length must be atleast 8 characters.....";  
+  document.getElementById("password1").innerHTML = "Password length must be atleast 8 characters.....";  
+  
   return false;  
 } 
 if  (!pass.match(validpass)) {
-  document.getElementById("password1").innerHTML = "**password should contain atleast one number and one special character......";  
+  document.getElementById("password1").innerHTML = "password should contain atleast one number and one special character......";  
+  
   return false;  
 
+}
+else{
+  document.getElementById('displaypass').innerHTML = " password created successfully....!!!!"
+  document.getElementById("password1").innerHTML = ""
+  return true;
 }
 // else{
 // return true;
@@ -498,29 +614,45 @@ var pass2=document.getElementById("confirm-password").value;
 
 if(pass1!=pass2){
   document.getElementById("confpass").innerHTML = "**Please enter same password...!!!!!!";
+  document.getElementById('displaypass').innerHTML = " "
   return false;
 }
 else{
-
+  // document.getElementById('displaypass').innerHTML = " password matched....!!!!"
+  document.getElementById("confpass").innerHTML = ""
  return true;
 }
 }
 
 function checkButtonWhat() {  
+  // debugger
+//   if(document.getElementById('opt-age-group01').checked) { 
+//     document.getElementById("dis").innerHTML 
+//         // = document.getElementById("opt-radio01").value 
+//         = "Age is under -19"; 
+//         document.getElementById("errormsg").innerHTML = ""
+//         return true;
+// }
     if(document.getElementById('what-to-do-radio01').checked) { 
         document.getElementById("displaywhat").innerHTML 
             // = document.getElementById("opt-radio01").value 
             = "Selected process to timeline"; 
+            document.getElementById("errormsgwhat").innerHTML  = ""
+            return true;
     } 
     else if(document.getElementById('what-to-do-radio02').checked) { 
         document.getElementById("displaywhat").innerHTML 
             // = document.getElementById("opt-radio02").value 
             = "Selected create a map";   
+            document.getElementById("errormsgwhat").innerHTML  = ""
+            return true;
     }
     else if(document.getElementById('what-to-do-radio03').checked) { 
       document.getElementById("displaywhat").innerHTML 
           // = document.getElementById("opt-radio02").value 
           = "Selected create a travel plan";   
+          document.getElementById("errormsgwhat").innerHTML  = ""
+            return true;
   }
     else { 
         document.getElementById("errormsgwhat").innerHTML 
@@ -589,6 +721,18 @@ const searchFunGroup = () => {
       }
   }
 }
+
+let jsonObj = {
+  // username : document.getElementById('user_field').value,  
+  username : 'user_field',  
+
+  name : 'Moose' ,
+  rollno :'5' ,
+  subject : 'JS'
+}
+console.log(jsonObj);
+let myJsonStr = JSON.stringify(jsonObj);
+console.log(myJsonStr);
 
 // const searchInput = document.querySelector("[data-search]")
 // searchInput.addEventListener("input", e =>{
