@@ -4,6 +4,7 @@ function checkButtonUser() {
     document.getElementById("user-error").innerHTML =
       "Username must not be empty.....";
     }
+    
     if (!emailValidation()){
       document.getElementById("email-error").innerHTML =
         "email must not be empty.....";
@@ -12,36 +13,59 @@ function checkButtonUser() {
         document.getElementById("error").innerHTML =
           "occupation must not be empty.....";
         }
+        else { document.getElementById("error").innerHTML = ""; }
         if (!checkButtonAge()){
           document.getElementById("errormsg").innerHTML =
             "age must not be empty.....";
-          }
+          }else{document.getElementById("errormsg").innerHTML ="";}
           if (!checkButtonArea()){
             document.getElementById("errormsgarea").innerHTML =
               "area must not be empty.....";
-            }
+            }else{document.getElementById("errormsgarea").innerHTML ="";}
               if (!checkButtonUsergroup()){
                 document.getElementById("errormsguser").innerHTML =
                   "user must not be empty.....";
-                }
+                }else{document.getElementById("errormsguser").innerHTML ="";}
                 if (!checkButtonGroup()){
                   document.getElementById("errormsggroup").innerHTML =
                     "group must not be empty.....";
-                  }
+                  }else{document.getElementById("errormsggroup").innerHTML ="";}
                   if (!myFunPass()){
                     // debugger
                     document.getElementById("password1").innerHTML =
                       "password must not be empty.....";
-                    }
+                    }else{document.getElementById("password1").innerHTML ="";}
                     if (!myFunConPass()){
                       document.getElementById("confpass").innerHTML =
                         "confirm password must not be empty.....";
-                      }
+                      }else{document.getElementById("confpass").innerHTML ="";}
                       if (!checkButtonWhat()){
                         debugger
                         document.getElementById("errormsgwhat").innerHTML =
                           "what to do next must not be empty.....";
                         }
+  //                       else{
+  //                         let User_data = [];
+  //                         let data = {
+  //                         name: document.getElementById("user-field").value,
+  //                         email: document.getElementById("email-field").value,
+  //                         occupation: document.getElementsByClassName('form-radio form-radio-occupation').value,
+  //                         age_group: document.getElementsByClassName('radio-card-box age-group-card-box').value,
+  //                         follow_area: document.getElementsByClassName('form-checkbox form-checkbox-areas').value,
+  //                         follow_user: document.getElementsByClassName('form-checkbox form-checkbox-follow').value,
+  //                         follow_group: document.getElementsByClassName('form-checkbox form-checkbox-groups').value,
+  //                         password: document.getElementById("password").value,
+  //                         next_step: document.getElementsByClassName('form-radio form-radio-what-to-do').value,
+  //   }
+
+  //   User_data.push(data);
+  //   localStorage.setItem("user_data", JSON.stringify(User_data));
+  //   console.log(User_data)
+  //   window.location.href = "user_data.html";
+
+
+  // }
+                        
 } 
 
 
@@ -70,10 +94,15 @@ function userValidation() {
         username.focus;
       return false;
     } else {
+      document.getElementById("user-error").innerHTML 
+      = ""
+       
+}
+
       return true;
     }
   }
-}
+
 function emailValidation() {
   var email = document.getElementById('email_field');
   var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -85,6 +114,8 @@ function emailValidation() {
         return false;
     }
     else {
+        document.getElementById("email-error").innerHTML 
+        = ""
         // alert("Thanks you....");
         return true;
     }
@@ -722,17 +753,19 @@ const searchFunGroup = () => {
   }
 }
 
-let jsonObj = {
-  // username : document.getElementById('user_field').value,  
-  username : 'user_field',  
 
-  name : 'Moose' ,
-  rollno :'5' ,
-  subject : 'JS'
-}
-console.log(jsonObj);
-let myJsonStr = JSON.stringify(jsonObj);
-console.log(myJsonStr);
+
+// let jsonObj = {
+//   // username : document.getElementById('user_field').value,  
+//   username : 'user_field',  
+
+//   name : 'Moose' ,
+//   rollno :'5' ,
+//   subject : 'JS'
+// }
+// console.log(jsonObj);
+// let myJsonStr = JSON.stringify(jsonObj);
+// console.log(myJsonStr);
 
 // const searchInput = document.querySelector("[data-search]")
 // searchInput.addEventListener("input", e =>{
@@ -922,3 +955,106 @@ $("#paises").on("select2:select", function (evt) {
 //   text: 'Colombia',
 //   phone: '+57 1 381 6806'
 // }];
+
+
+
+// window.addEventListener('scroll',( )=>{
+// debugger
+//   const tscroll=document.documentElement.scrollHeight - window.innerHeight;
+//   const scrolled=window.scrollY;
+//   console.log(scrolled);
+  
+//   if (scrolled>200){
+//     if(!NameValidation() || !EmailValidation()){
+//     // alert("Please!! fill the Name and Email field first ")
+//     window.scrollTo({
+//       top: 10,
+//       left:0,
+//       behavior: 'instant'
+//       });
+   
+//     }}
+  
+//     if (scrolled>950){
+//       if(!OccupationValidation()){
+      
+//       window.scrollTo({
+//         top: 700,
+//         left:0,
+//         behavior: 'instant'
+//         });
+  
+     
+     
+//       }}
+  
+//       if (scrolled>2000){
+//         if(!AgeValidation()){
+//         // alert("Please!! fill the Name and Email field first ")
+//         window.scrollTo({
+//           top: 1500,
+//           left:0,
+//           behavior: 'instant'
+//           });
+       
+//         }}
+  
+//         if (scrolled>3200){
+//           if(!AreaValidation()){
+//           // alert("Please!! fill the Name and Email field first ")
+//           window.scrollTo({
+//             top: 2600,
+//             left:0,
+//             behavior: 'instant'
+//             });
+         
+//           }}
+  
+//           if (scrolled>4200){
+//             if(!UserValidation()){
+//             // alert("Please!! fill the Name and Email field first ")
+//             window.scrollTo({
+//               top: 3500,
+//               left:0,
+//               behavior: 'instant'
+//               });
+           
+//             }}
+  
+//             if (scrolled>5200){
+//               if(!GroupValidation()){
+//               // alert("Please!! fill the Name and Email field first ")
+//               window.scrollTo({
+//                 top: 4600,
+//                 left:0,
+//                 behavior: 'instant'
+//                 });
+             
+//               }}
+  
+//               if (scrolled>5900){
+//                 if(!passwordValidation() || !ConfpassValidation()){
+//                 // alert("Please!! fill the Name and Email field first ")
+//                 window.scrollTo({
+//                   top: 5400,
+//                   left:0,
+//                   behavior: 'instant'
+//                   });
+               
+//                 }}
+  
+//   });
+
+  
+
+// window.addEventListener('scroll', () => {
+//   // const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+//   alert('hello')
+//   const scrolled  = window.scrollY;
+//   // if (Math.ceil(scrolled) === scrollable){
+//   //     alert('u have reached the bottom....')
+//   // }
+//   console.log('scrolled')
+
+// })
+
