@@ -3030,3 +3030,12 @@ header .header-div .logo-div .logo_link {
   top: 0px;
   padding: 10px 0px;
 }
+
+
+/* .main-body-div .active . row get-row mr-minus-8 li{
+
+} */
+
+#area .active #areaname li{
+  display: block;
+}

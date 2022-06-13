@@ -1,3 +1,30 @@
+// const searchWrapper = document.querySelector('#area');
+// const inputBox = searchWrapper.querySelector('input');
+// const suggBox = searchWrapper.querySelector('#areaname');
+
+// inputBox.onkeyup = (e) =>{
+//   console.log(e.target.value);
+// }
+
+var a;
+function show_hide(){
+  if(a == 1){
+    document.getElementById('user_regi').style.display = "inline";
+    return a = 0;
+  }
+  else{
+    document.getElementById('user_regi').style.display = 'none';
+    return a = 1;
+  }
+
+}
+
+
+
+
+
+
+
 function checkButtonUser() {  
   // debugger
   if (!userValidation()){
@@ -40,31 +67,10 @@ function checkButtonUser() {
                         "confirm password must not be empty.....";
                       }else{document.getElementById("confpass").innerHTML ="";}
                       if (!checkButtonWhat()){
-                        debugger
+                        // debugger
                         document.getElementById("errormsgwhat").innerHTML =
                           "what to do next must not be empty.....";
                         }
-  //                       else{
-  //                         let User_data = [];
-  //                         let data = {
-  //                         name: document.getElementById("user-field").value,
-  //                         email: document.getElementById("email-field").value,
-  //                         occupation: document.getElementsByClassName('form-radio form-radio-occupation').value,
-  //                         age_group: document.getElementsByClassName('radio-card-box age-group-card-box').value,
-  //                         follow_area: document.getElementsByClassName('form-checkbox form-checkbox-areas').value,
-  //                         follow_user: document.getElementsByClassName('form-checkbox form-checkbox-follow').value,
-  //                         follow_group: document.getElementsByClassName('form-checkbox form-checkbox-groups').value,
-  //                         password: document.getElementById("password").value,
-  //                         next_step: document.getElementsByClassName('form-radio form-radio-what-to-do').value,
-  //   }
-
-  //   User_data.push(data);
-  //   localStorage.setItem("user_data", JSON.stringify(User_data));
-  //   console.log(User_data)
-  //   window.location.href = "user_data.html";
-
-
-  // }
                         
 } 
 
@@ -727,11 +733,15 @@ const searchFunUser = () => {
   let filter = document.getElementById('myInputUser').value.toUpperCase();
   let ul = document.getElementById('myBoxUser');
   let li = ul.getElementsByTagName('li');
+  let emptyArray = [];
   for ( var i=0 ; i <li.length; i++){
       let a = li[i].getElementsByTagName('a')[0];
       let textValue = a.textContent || a.innerHTML;
+      
       if(textValue.toUpperCase().indexOf(filter) > -1){
           li[i].style.display = '';
+          emptyArray = li[i];
+          console.log(emptyArray);
       }else{
           li[i].style.display = 'none';
       }
@@ -802,6 +812,53 @@ const searchFunGroup = () => {
 //             lb[i].style.display = "none";
 //         }
 //     }
+// }
+
+// const search = () => {
+//   let filter = document.getElementById('myInput').value.toUpperCase();
+//   let ul = document.getElementById('myBox');
+//   let li = ul.getElementsByTagName('li');
+//   for ( var i=0 ; i <li.length; i++){
+//       let a = li[i].getElementsByTagName('a')[0];
+//       let textValue = a.textContent || a.innerHTML;
+//       if(textValue.toUpperCase().indexOf(filter) > -1){
+//           li[i].style.display = '';
+//       }else{
+//           li[i].style.display = 'none';
+//       }
+//   }
+// }
+
+
+// let searchBox = document.querySelector('#myInput');
+// let images = document.querySelectorAll('.main-body-div .col-lg-3 col-md-3 grid-20 plr-8 .img-checkbox-card-box area-card-box');
+// searchBox.oninput = () =>{
+//   let value = searchBox.value;
+//   images.forEach(filter=>{
+//     let title = filter.getAttribute('data-title');
+//     if(value == title){
+//       filter.style.display = "block";
+//     }
+//   })
+// }
+
+
+// const search = () =>{
+//   const searchbox = document.getElementById('myInput').value.toUpperCase();
+//   const items = document.getElementById('myBox')
+//   const area = document.querySelectorAll('.col-lg-3 col-md-3 grid-20 plr-8')
+//   const aname = document.getElementsByTagName('h4')
+//   for (var i=0; i <aname.length ; i++){
+//     let match = area[i].getElementsByTagName('h4')[0];
+//     if(match){
+//       let textValue =match.textContent || match.innerHTML;
+//       if(textValue.toUpperCase().indexOf(searchbox) > -1){
+//         area[i].style.display="";
+//       }else{
+//         area[i].style.display="none";
+//       }
+//     }
+//   }
 // }
 
 
