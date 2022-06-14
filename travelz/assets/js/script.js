@@ -6,18 +6,18 @@
 //   console.log(e.target.value);
 // }
 
-var a;
-function show_hide(){
-  if(a == 1){
-    document.getElementById('user_regi').style.display = "inline";
-    return a = 0;
-  }
-  else{
-    document.getElementById('user_regi').style.display = 'none';
-    return a = 1;
-  }
+// var a;
+// function show_hide(){
+//   if(a == 1){
+//     document.getElementById('user_regi').style.display = "inline";
+//     return a = 0;
+//   }
+//   else{
+//     document.getElementById('user_regi').style.display = 'none';
+//     return a = 1;
+//   }
 
-}
+// }
 
 
 
@@ -763,6 +763,51 @@ const searchFunGroup = () => {
   }
 }
 
+// fetch("assets/js/user.json")
+//   .then(response => {
+//    return response.json();
+// })
+// .then(jsondata => console.log(jsondata));
+
+
+
+fetch("https://api.chucknorris.io/jokes/random?category=dev")
+  .then(response => response.json())
+  .then(data =>{
+    console.log(data)
+    console.log(JSON.stringify(data))
+  })
+
+
+  // fetch("./user.json")
+  
+  // .then(response => response.json())
+  // .then(data =>{
+  //   console.log(data)
+  //   console.log(JSON.stringify(data))
+  // })
+
+
+// const data = require('./user.json');
+// console.log(data);
+fetch("./user.json")
+.then(response => {
+   return response.json();
+})
+.then(data => console.log(data));
+
+
+
+
+const obj = {
+  name : "sunny",
+  email : "sunnymint@gmail.com",
+}
+console.log(obj);
+let objStr = JSON.stringify(obj);
+console.log(objStr);
+// const me = JSON.parse(obj);
+// console.log(me);
 
 
 // let jsonObj = {
@@ -776,6 +821,8 @@ const searchFunGroup = () => {
 // console.log(jsonObj);
 // let myJsonStr = JSON.stringify(jsonObj);
 // console.log(myJsonStr);
+
+
 
 // const searchInput = document.querySelector("[data-search]")
 // searchInput.addEventListener("input", e =>{

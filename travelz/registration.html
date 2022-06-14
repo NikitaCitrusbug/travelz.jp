@@ -25,6 +25,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/suggestions.js"></script>
+    <script src="assets/js/user.json"></script>
     <!--[if IE]>
       <script src="assets/js/html5.js"></script>
     <![endif]-->
@@ -44,7 +45,43 @@
 }
 </script> -->
 
-<script>
+<!-- <script>
+  fetch("user.json")
+  .then(response => response.json())
+  .then(data =>{
+    console.log(data)
+  })
+</script> -->
+ 
+<!-- <script>
+  fetch('user.json').then(function (response) {
+    return response.json();
+  }).then(function(obj){
+    console.log(obj);
+  }).catch(function(error){
+    console.error('something went wrong............');
+    console.error(error);
+  });
+</script> -->
+
+<!-- <script>
+  fetch("assets/js/user.json")
+  .then(response => {
+   return response.json();
+})
+.then(jsondata => console.log(jsondata));
+  // const jsonData= require('assets/js/user.json'); 
+  // console.log(jsonData);
+</script> -->
+
+<!-- <script>
+  fetch("asserts/js/user.json")
+  .then(response => response.json())
+  .then(jsondata => console.log(jsondata));
+</script> -->
+
+
+<!-- <script>
 window.addEventListener('scroll',( )=>{
 
   const tscroll=document.documentElement.scrollHeight - window.innerHeight;
@@ -99,12 +136,18 @@ window.addEventListener('scroll',( )=>{
     else{
       password.style.display = ""
     }
-    if(!myFunPass() || !myFunConPass()){
-      alert("jsbhd")
-      what.style.display = "none"
-    }else{
+    if(!myFunPass()){
+      what.style.display ="none"
+    }
+    else{
       what.style.display = ""
     }
+    // if(!myFunPass() || !myFunConPass()){
+    //   // alert("jsbhd")
+    //   what.style.display = "none"
+    // }else{
+    //   what.style.display = ""
+    // }
     // if(!myFunPass()||!myFunConPass()){
     //   alert("hd")
     //   what.style.display = "none"
@@ -112,92 +155,8 @@ window.addEventListener('scroll',( )=>{
     // else{
     //   window.getComputedStyle(what).display === ""
     // }
-   
-
- 
-  
-  
-  // if (scrolled>200){
-  //   if(!UserValidation() || !EmailValidation()){
-  //   // alert("Please!! fill the Name and Email field first ")
-  //   window.scrollTo({
-  //     top: 10,
-  //     left:0,
-  //     behavior: 'instant'
-  //     });
-   
-  //   }}
-  
-  //   if (scrolled>950){
-  //     if(!OccupationValidation()){
-      
-  //     window.scrollTo({
-  //       top: 700,
-  //       left:0,
-  //       behavior: 'instant'
-  //       });
-  
-     
-     
-  //     }}
-  
-  //     if (scrolled>2000){
-  //       if(!AgeValidation()){
-  //       // alert("Please!! fill the Name and Email field first ")
-  //       window.scrollTo({
-  //         top: 1500,
-  //         left:0,
-  //         behavior: 'instant'
-  //         });
-       
-  //       }}
-  
-  //       if (scrolled>3200){
-  //         if(!AreaValidation()){
-  //         // alert("Please!! fill the Name and Email field first ")
-  //         window.scrollTo({
-  //           top: 2600,
-  //           left:0,
-  //           behavior: 'instant'
-  //           });
-         
-  //         }}
-  
-  //         if (scrolled>4200){
-  //           if(!UserValidation()){
-  //           // alert("Please!! fill the Name and Email field first ")
-  //           window.scrollTo({
-  //             top: 3500,
-  //             left:0,
-  //             behavior: 'instant'
-  //             });
-           
-  //           }}
-  
-  //           if (scrolled>5200){
-  //             if(!GroupValidation()){
-  //             // alert("Please!! fill the Name and Email field first ")
-  //             window.scrollTo({
-  //               top: 4600,
-  //               left:0,
-  //               behavior: 'instant'
-  //               });
-             
-  //             }}
-  
-  //             if (scrolled>5900){
-  //               if(!passwordValidation() || !ConfpassValidation()){
-  //               // alert("Please!! fill the Name and Email field first ")
-  //               window.scrollTo({
-  //                 top: 5400,
-  //                 left:0,
-  //                 behavior: 'instant'
-  //                 });
-               
-  //               }}
-  
   });
-</script>
+</script> -->
     
   </head>
 
@@ -1265,7 +1224,7 @@ window.addEventListener('scroll',( )=>{
                                                     }
                                                 }
                                             }
-                                        </script> -->
+                                        </scrip> -->
                       </div>
                       <div>
                         <h3 id="displayarea" style="color: green"></h3>
