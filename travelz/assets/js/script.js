@@ -1020,6 +1020,10 @@ $("#paises").on("select2:select", function (evt) {
 //   const tscroll=document.documentElement.scrollHeight - window.innerHeight;
 //   const scrolled=window.scrollY;
 //   console.log(scrolled);
+//   var occu = document.getElementsById("occu");
+//   console.log(occu);
+//   alert('hello');
+  
   
 //   if (scrolled>200){
 //     if(!NameValidation() || !EmailValidation()){
