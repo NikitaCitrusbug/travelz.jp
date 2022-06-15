@@ -1,0 +1,63 @@
+[
+        {
+            "label" : "select-area-option01",
+            "name" : "Akihabara",
+            "image" : "assets/images/areas/areas-01.jpg",
+            "id" : "select-area-option01"
+        },
+        {
+            "label" : "select-area-option02",
+            "name" : "Asakusa",
+            "image" : "assets/images/areas/areas-02.jpg",
+            "id" : "select-area-option02"
+        },
+        {
+            "label" : "select-area-option03",
+            "name" : "Harajuku",
+            "image" : "assets/images/areas/areas-03.jpg",
+            "id" : "select-area-option03"
+        },
+        {
+            "label" : "select-area-option04",
+            "name" : "Shibuya",
+            "image" : "assets/images/areas/areas-04.jpg",
+            "id" : "select-area-option04"
+        },
+        {
+            "label" : "select-area-option05",
+            "name" : "Ueno",
+            "image" : "assets/images/areas/areas-05.jpg",
+            "id" : "select-area-option05"
+        },
+        {
+            "label" : "select-area-option06",
+            "name" : "Akihabara..",
+            "image" : "assets/images/areas/areas-06.jpg",
+            "id" : "select-area-option06"
+        },
+        {
+            "label" : "select-area-option07",
+            "name" : "Asakusa..",
+            "image" : "assets/images/areas/areas-07.jpg",
+            "id" : "select-area-option07"
+        },
+        {
+            "label" : "select-area-option08",
+            "name" : "Harajuku..",
+            "image" : "assets/images/areas/areas-08.jpg",
+            "id" : "select-area-option08"
+        },
+        {
+            "label" : "select-area-option09",
+            "name" : "Shibuya..",
+            "image" : "assets/images/areas/areas-09.jpg",
+            "id" : "select-area-option09"
+        },
+        {
+            "label" : "select-area-option10",
+            "name" : "Ueno..",
+            "image" : "assets/images/areas/areas-10.jpg",
+            "id" : "select-area-option10"
+        }
+]
+

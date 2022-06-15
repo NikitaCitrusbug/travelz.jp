@@ -1,0 +1,96 @@
+[
+    {  
+        "name" : "sunny",
+        "image" : "assets/images/user/user1.jpg",
+        "email" : "sunnymint@gmail.com",
+        "id" : "select-follow-option01"
+    },
+    {  
+        "name" : "Montes",
+        "image" : "assets/images/user/user2.jpg",
+        "email" : "montes@gmail.com",
+        "id" : "select-follow-option02"
+    },
+    {  
+        "name" : "Nathanael",
+        "image" : "assets/images/user/user3.jpg",
+        "email" : "nathanael@gmail.com",
+        "id" : "select-follow-option03"
+    },
+    {  
+        "name" : "Rivera",
+        "image" : "assets/images/user/user4.jpg",
+        "email" : "rivera@gmail.com",
+        "id" : "select-follow-option04"
+    },
+    
+    {  
+        "name" : "Antwan",
+        "image" : "assets/images/user/user5.jpg",
+        "email" : "antwan@gmail.com",
+        "id" : "select-follow-option05"
+    },
+    
+    {  
+        "name" : "Camacho",
+        "image" : "assets/images/user/user6.jpg",
+        "email" : "camacho@gmail.com",
+        "id" : "select-follow-option06"
+    },
+    {  
+        "name" : "Janette",
+        "image" : "assets/images/user/user7.jpg",
+        "email" : "janette@gmail.com",
+        "id" : "select-follow-option07"
+    },
+    {  
+        "name" : "Thompson",
+        "image" : "assets/images/user/user8.jpg",
+        "email" : "thompson@gmail.com",
+        "id" : "select-follow-option08"
+    },
+    {  
+        "name" : "Spears",
+        "image" : "assets/images/user/user9.jpg",
+        "email" : "spears@gmail.com",
+        "id" : "select-follow-option09"
+    },
+    {  
+        "name" : "Pope",
+        "image" : "assets/images/user/user10.jpg",
+        "email" : "pope@gmail.com",
+        "id" : "select-follow-option10"
+    },
+    {  
+        "name" : "Gordon",
+        "image" : "assets/images/user/user9.jpg",
+        "email" : "gordon@gmail.com",
+        "id" : "select-follow-option11"
+    },
+    {  
+        "name" : "Valenzuela",
+        "image" : "assets/images/user/user4.jpg",
+        "email" : "valenzuela@gmail.com",
+        "id" : "select-follow-option12"
+    },
+    {  
+        "name" : "Delgado",
+        "image" : "assets/images/user/user1.jpg",
+        "email" : "delgado@gmail.com",
+        "id" : "select-follow-option13"
+    },
+    {  
+        "name" : "Jenkins",
+        "image" : "assets/images/user/user5.jpg",
+        "email" : "jenkins@gmail.com",
+        "id" : "select-follow-option14"
+    },
+    {  
+        "name" : "Vargas",
+        "image" : "assets/images/user/user2.jpg",
+        "email" : "vargas@gmail.com",
+        "id" : "select-follow-option15"
+    }
+    
+]
+

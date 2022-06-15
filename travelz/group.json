@@ -1,0 +1,79 @@
+[
+    {
+        "label" : "select-groups-option01",
+        "name" : "Akihabara",
+        "image" : "assets/images/groups/groups01.jpg"
+    },
+    {
+        "label" : "select-groups-option02",
+        "name" : "Asakusa",
+        "image" : "assets/images/groups/groups02.jpg"
+    },
+    {
+        "label" : "select-groups-option03",
+        "name" : "Harajuku",
+        "image" : "assets/images/groups/groups03.jpg"
+    },
+    {
+        "label" : "select-groups-option04",
+        "name" : "Shibuya",
+        "image" : "assets/images/groups/groups04.jpg"
+    },
+    {
+        "label" : "select-groups-option05",
+        "name" : "Ueno",
+        "image" : "assets/images/groups/groups05.jpg"
+    },
+    {
+        "label" : "select-groups-option06",
+        "name" : "Akihabara..",
+        "image" : "assets/images/groups/groups06.jpg"
+    },
+    {
+        "label" : "select-groups-option07",
+        "name" : "Asakusa..",
+        "image" : "assets/images/groups/groups07.jpg"
+    },
+    {
+        "label" : "select-groups-option08",
+        "name" : "Harajuku..",
+        "image" : "assets/images/groups/groups08.jpg"
+    },
+    {
+        "label" : "select-groups-option09",
+        "name" : "Shibuya..",
+        "image" : "assets/images/groups/groups09.jpg"
+    },
+    {
+        "label" : "select-groups-option10",
+        "name" : "Ueno..",
+        "image" : "assets/images/groups/groups10.jpg"
+    },
+    {
+        "label" : "select-groups-option11",
+        "name" : "Akihabara..!!",
+        "image" : "assets/images/groups/groups11.jpg"
+    },
+    {
+        "label" : "select-groups-option12",
+        "name" : "Asakusa..!!",
+        "image" : "assets/images/groups/groups12.jpg"
+    },
+    {
+        "label" : "select-groups-option13",
+        "name" : "Harajuku..!!",
+        "image" : "assets/images/groups/groups13.jpg"
+        
+    },
+    {
+        "label" : "select-groups-option14",
+        "name" : "Shibuya..!!",
+        "image" : "assets/images/groups/groups14.jpg"
+    },
+    {
+        "label" : "select-groups-option15",
+        "name" : "Ueno..!!",
+        "image" : "assets/images/groups/groups15.jpg"
+    }
+]
+

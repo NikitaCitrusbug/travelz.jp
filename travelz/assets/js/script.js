@@ -449,10 +449,10 @@ function myFunUser(){
     }
   }
   if (newvar< 3){
-    document.getElementById("notvaliduser").innerHTML="Please select minimum three users";
+    document.getElementById("notvaliduser").innerHTML ="Please select minimum three users";
     return false;
   }
-  else { document.getElementById("notvaliduser").innerHTML="";}
+  else { document.getElementById("notvaliduser").innerHTML ="";}
     return true;
   // if(newvar < 3){
   //   document.getElementById("notvaliduser").innerHTML = "Please select minimum three users"
@@ -774,8 +774,8 @@ const searchFunGroup = () => {
 fetch("https://api.chucknorris.io/jokes/random?category=dev")
   .then(response => response.json())
   .then(data =>{
-    console.log(data)
-    console.log(JSON.stringify(data))
+    // console.log(data)
+    // console.log(JSON.stringify(data))
   })
 
 
@@ -790,22 +790,263 @@ fetch("https://api.chucknorris.io/jokes/random?category=dev")
 
 // const data = require('./user.json');
 // console.log(data);
-fetch("./user.json")
+fetch("http://127.0.0.1:5500/user.json")
 .then(response => {
    return response.json();
 })
-.then(data => console.log(data));
+.then(data => {
+  // console.log(data)
+  // console.log(JSON.stringify(data))
+  // console.log(data.name);
+})
+
+// var area = document.getElementById('area');
+// area.innerHTML = fetch("http://127.0.0.1:5500/user.json");
+
+async function area_user(){
+  const response = await fetch("http://127.0.0.1:5500/user.json");
+  const data = await response.json();
+  // const name = data;
+  // console.log(name);
+
+}
+area_user();
 
 
+fetch("http://127.0.0.1:5500/area.json")
+.then(function(response){
+  return response.json();
+})
+.then(function(areas){
+  let placeholder = document.querySelector("#areaname");
+  let out = "";
+  for (let product of areas){
+    out += `
+    <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                              <div
+                                class="img-checkbox-card-box area-card-box"
+                                data-title="${product.name}"
+                              >
+                                <label
+                                  for="${product.label}"
+                                  class="label-box"
+                                >
+                                  <li
+                                    style="
+                                      color: white;
+                                      font-weight: bolder;
+                                      font-size: 16px;
+                                    "
+                                  >
+                                    <div class="check-box-position">
+                                      <button class="checkbox-round-div">
+                                        <i class="fe fe-check fe-custom"></i>
+                                      </button>
+                                    </div>
+                                    <div class="img-banner">
+                                      <img
+                                        src="${product.image}"
+                                        class="img-fluid img-responsive"
+                                        alt="area"
+                                      />
+                                    </div>
+                                    <div
+                                      class="check-title-row"
+                                    
+                                    >
+                                      <a>${product.name}</a>
+                                      
+                                    </div>
+                                  </li>
+                                </label>
+                                <input
+                                  type="checkbox"
+                                  class="form-checkbox form-checkbox-areas"
+                                  id="${product.id}"
+                                  onclick="myFunArea()"
+                                />
+                              </div>
+                            </div>
+    
+
+    `;
+//     console.log(product.label);
+// console.log(product.image);
+// console.log(product.name);
+// console.log(product.id);  
+  }
+  
+  console.log(placeholder)
+  placeholder.innerHTML = out;
+  
+})
+
+
+fetch("http://127.0.0.1:5500/user.json")
+.then(function(response){
+  return response.json();
+})
+.then(function(users){
+  let placeholder = document.querySelector("#username");
+  let out = "";
+  for (let product of users){
+    out += `
+    <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                              <div class="user-card-box follow-card-box">
+                                <label
+                                  for="${product.id}"
+                                  class="label-box"
+                                >
+                                  <li
+                                    style="
+                                      color: white;
+                                      font-weight: bolder;
+                                      font-size: 16px;
+                                    "
+                                  >
+                                    <div class="check-box-position">
+                                      <button class="checkbox-round-div">
+                                        <i class="fe fe-check fe-custom"></i>
+                                      </button>
+                                    </div>
+                                    <div class="img-user-thumb">
+                                      <img
+                                        src="${product.image}"
+                                        class="img-fluid img-user"
+                                        alt="follow"
+                                      />
+                                    </div>
+                                    <div class="check-title-row">
+                                      <a>
+                                        <h4>${product.name}</h4>
+                                      </a>
+                                      <a>
+                                        <p>${product.email}</p>
+                                      </a>
+                                      <!-- <h4>sunny</h4> -->
+                                    </div>
+                                  </li>
+                                </label>
+                                <input
+                                  type="checkbox"
+                                  class="form-checkbox form-checkbox-follow"
+                                  id="${product.id}"
+                                  onclick="myFunUser()"
+                                />
+                              </div>
+                            </div>
+    
+
+    `;
+//     console.log(product.label);
+// console.log(product.image);
+// console.log(product.name);
+// console.log(product.id);  
+  }
+  
+  console.log(placeholder)
+  placeholder.innerHTML = out;
+  
+})
+
+fetch("http://127.0.0.1:5500/group.json")
+.then(function(response){
+  return response.json();
+})
+.then(function(areas){
+  let placeholder = document.querySelector("#groupname");
+  let out = "";
+  for (let product of areas){
+    out += `
+                            <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                              <div
+                                class="img-checkbox-card-box groups-card-box"
+                              >
+                                <label
+                                  for="${product.label}"
+                                  class="label-box"
+                                >
+                                  <li
+                                    style="
+                                      color: white;
+                                      font-weight: bolder;
+                                      font-size: 16px;
+                                    "
+                                  >
+                                    <div class="check-box-position">
+                                      <button class="checkbox-round-div">
+                                        <i class="fe fe-check fe-custom"></i>
+                                      </button>
+                                    </div>
+                                    <div class="img-banner">
+                                      <img
+                                        src="${product.image}"
+                                        class="img-fluid img-responsive"
+                                        alt="groups"
+                                      />
+                                    </div>
+                                    <div class="check-title-row">
+                                      <a>${product.name}</a>
+                                      <!-- <h4>Akihabara</h4> -->
+                                    </div>
+                                  </li>
+                                </label>
+                                <input
+                                  type="checkbox"
+                                  class="form-checkbox form-checkbox-groups"
+                                  id="${product.label}"
+                                  onclick="myFunGroup()"
+                                />
+                              </div>
+                            </div>
+
+    `;
+//     console.log(product.label);
+// console.log(product.image);
+// console.log(product.name);
+// console.log(product.id);  
+  }
+  
+  console.log(placeholder)
+  placeholder.innerHTML = out;
+  
+})
+
+
+// let area_load = new XMLHttpRequest();
+// area_load.open('GET','user.json' , true) 
+// area_load.send();
+//  area_load.onload == function(){
+//   if(this.readyState == 4 && this.status == 200){
+//     let load = JSON.parse(this.responseText)
+//     console.log(load);
+//   }
+
+//  }
 
 
 const obj = {
   name : "sunny",
   email : "sunnymint@gmail.com",
 }
-console.log(obj);
-let objStr = JSON.stringify(obj);
-console.log(objStr);
+// console.log(obj);
+// let objStr = JSON.stringify(obj);
+// console.log(objStr);
+
+
+// var xmlhttp = new XMLHttpRequest();
+// var url = "user.txt";
+// xmlhttp.open('GET' , url , true);
+// xmlhttp.send();
+// xmlhttp.onreadystatechange = function(){
+//   if(this.readyState == 4 && this.status == 200){
+//     var my = JSON.parse(this.responseText);
+//     console.log(my);
+//   }
+// };
+
+
+
 // const me = JSON.parse(obj);
 // console.log(me);
 
