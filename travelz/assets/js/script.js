@@ -813,14 +813,23 @@ async function area_user(){
 area_user();
 
 
+
+
+
 fetch("http://127.0.0.1:5500/area.json")
 .then(function(response){
   return response.json();
 })
 .then(function(areas){
+  
+  // let search = document.getElementById("searchInput").toUpperCase();
+  
   let placeholder = document.querySelector("#areaname");
   let out = "";
   for (let product of areas){
+    xoxo = product.name.toUpperCase();
+    console.log(xoxo);
+    
     out += `
     <div class="col-lg-3 col-md-3 grid-20 plr-8">
                               <div
@@ -875,11 +884,78 @@ fetch("http://127.0.0.1:5500/area.json")
 // console.log(product.name);
 // console.log(product.id);  
   }
-  
-  console.log(placeholder)
+  // console.log(search)
+  // console.log(areas)
+  // console.log(areas.title)
+  // console.log(placeholder)
   placeholder.innerHTML = out;
+  // res = await JSON.search( data, '//*[id="select-area-option01"]' );
+
+  // console.log( res[0].name);
   
 })
+
+
+// async function search(){
+//   let searcharea = document.getElementById("searchInput").value.toUpperCase();
+//   const placeholder = await fetch("http://127.0.0.1:5500/area.json");
+  
+//   const areas = await placeholder.json();
+//   let out = ""
+//   for (let product of areas){
+//   info = product.name.toUpperCase();
+//   if(info.indexOf(searcharea) > -1){
+//     out += `
+//     <div class="col-lg-3 col-md-3 grid-20 plr-8">
+//                               <div
+//                                 class="img-checkbox-card-box area-card-box"
+//                                 data-title="${product.name}"
+//                               >
+//                                 <label
+//                                   for="${product.label}"
+//                                   class="label-box"
+//                                 >
+//                                   <li
+//                                     style="
+//                                       color: white;
+//                                       font-weight: bolder;
+//                                       font-size: 16px;
+//                                     "
+//                                   >
+//                                     <div class="check-box-position">
+//                                       <button class="checkbox-round-div">
+//                                         <i class="fe fe-check fe-custom"></i>
+//                                       </button>
+//                                     </div>
+//                                     <div class="img-banner">
+//                                       <img
+//                                         src="${product.image}"
+//                                         class="img-fluid img-responsive"
+//                                         alt="area"
+//                                       />
+//                                     </div>
+//                                     <div
+//                                       class="check-title-row"
+                                    
+//                                     >
+//                                       <a>${product.name}</a>
+                                      
+//                                     </div>
+//                                   </li>
+//                                 </label>
+//                                 <input
+//                                   type="checkbox"
+//                                   class="form-checkbox form-checkbox-areas"
+//                                   id="${product.id}"
+//                                   onclick="myFunArea()"
+//                                 />
+//                               </div>
+//                             </div>
+//     `
+//   }
+// }  
+
+// }
 
 
 fetch("http://127.0.0.1:5500/user.json")
@@ -944,7 +1020,7 @@ fetch("http://127.0.0.1:5500/user.json")
 // console.log(product.id);  
   }
   
-  console.log(placeholder)
+  // console.log(placeholder)
   placeholder.innerHTML = out;
   
 })
@@ -1007,10 +1083,91 @@ fetch("http://127.0.0.1:5500/group.json")
 // console.log(product.id);  
   }
   
-  console.log(placeholder)
+  // console.log(placeholder)
   placeholder.innerHTML = out;
   
 })
+
+
+// const input = document.getElementById("searchInput");
+// const searchList = document.getElementById("searchList");
+
+// const searchInfo = async searchJson =>{
+//   const response = await fetch ("http://127.0.0.1:5500/area.json");
+  
+//   const info = await response.json()
+//   let list = info.filter(infos =>{
+//     const infoReg = new RegExp('^${searchJson}' , 'gi');
+//     return infos.name.match(infoReg);
+//   });
+  
+  
+//   if(searchJson == ""){
+//     list=[];
+//     searchList.innerHTML= '';
+//   }
+//   outputInfo(list);
+//   // console.log(outputInfo(list));
+// };
+
+// const outputInfo = list =>{
+//   if(list.length>0){
+//     const inputValue = list.map(info =>`
+//     <div class="col-lg-3 col-md-3 grid-20 plr-8">
+//                               <div
+//                                 class="img-checkbox-card-box area-card-box"
+//                                 data-title="${info.name}"
+//                               >
+//                                 <label
+//                                   for="${info.label}"
+//                                   class="label-box"
+//                                 >
+//                                   <li
+//                                     style="
+//                                       color: white;
+//                                       font-weight: bolder;
+//                                       font-size: 16px;
+//                                     "
+//                                   >
+//                                     <div class="check-box-position">
+//                                       <button class="checkbox-round-div">
+//                                         <i class="fe fe-check fe-custom"></i>
+//                                       </button>
+//                                     </div>
+//                                     <div class="img-banner">
+//                                       <img
+//                                         src="${info.image}"
+//                                         class="img-fluid img-responsive"
+//                                         alt="area"
+//                                       />
+//                                     </div>
+//                                     <div
+//                                       class="check-title-row"
+                                    
+//                                     >
+//                                       <a>${info.name}</a>
+                                      
+//                                     </div>
+//                                   </li>
+//                                 </label>
+//                                 <input
+//                                   type="checkbox"
+//                                   class="form-checkbox form-checkbox-areas"
+//                                   id="${info.id}"
+//                                   onclick="myFunArea()"
+//                                 />
+//                               </div>
+//                             </div>
+//     `).join('');
+//     searchList.innerHTML = inputValue;
+  
+//   }
+// }
+// // debugger
+// areaname.addEventListener('input' ,() =>{
+//   alert('hello')
+//   searchInfo(input.value);
+// });
 
 
 // let area_load = new XMLHttpRequest();
@@ -1023,6 +1180,35 @@ fetch("http://127.0.0.1:5500/group.json")
 //   }
 
 //  }
+
+
+// $('#searchInput').keyup(function(){
+//             var searchField = $(this).val();
+// if(searchField === '')  {
+// $('#filter-records').html('');
+// return;
+// }
+//             var regex = new RegExp(searchField, "i");
+//             var output = '<div class="row">';
+//             var count = 1;
+//   $.each(data, function(key, val){
+// if ((val.employee_salary.search(regex) != -1) || (val.employee_name.search(regex) != -1)) {
+//   output += '<div class="col-md-6 well">';
+//   output += '<div class="col-md-3"><img class="img-responsive" src="'+val.profile_image+'" alt="'+ val.employee_name +'" /></div>';
+//   output += '<div class="col-md-7">';
+//   output += '<h5>' + val.employee_name + '</h5>';
+//   output += '<p>' + val.employee_salary + '</p>'
+//   output += '</div>';
+//   output += '</div>';
+//   if(count%2 == 0){
+// output += '</div><div class="row">'
+//   }
+//   count++;
+// }
+//   });
+//   output += '</div>';
+//   $('#filter-records').html(output);
+//         });
 
 
 const obj = {

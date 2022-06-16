@@ -25,6 +25,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/suggestions.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     
     <!--[if IE]>
       <script src="assets/js/html5.js"></script>
@@ -719,7 +720,7 @@ window.addEventListener('scroll',( )=>{
           </div>
           <!-- End of age-group-div -->
 
-          <div class="common-div areas-div" id="area">
+          <div class="common-div areas-div" >
             <div class="container">
               <div class="row">
                 <div class="col-lg-12 col-md-12">
@@ -731,20 +732,21 @@ window.addEventListener('scroll',( )=>{
                       </div>
                     </div>
 
-                    <div class="main-body-div">
+                    <div class="main-body-div" id="area">
                       <div class="search-box-root">
                         <div class="row get-row mr-minus-8">
                           <div class="col-lg-12 col-md-12 plr-8">
                             <div class="input-group input-group-30">
                               <input
-                                type="text"
+                                type="input"
                                 class="form-control"
-                                id="myInput"
+                                id="searchInput"
                                 name=""
+                                onkeyup="search()"
                                 placeholder="Select Areas to Follow"
-                                onkeyup="searchFun()"
+                                
                               />
-                              <div class="input-group-append">
+                              <div class="input-group-append"> 
                                 <button class="btn btn-success btn-search">
                                   <i class="material-icons search-icons">
                                     search
@@ -774,10 +776,12 @@ window.addEventListener('scroll',( )=>{
                                         </ul>  -->
                         <ul id="myBox">
                           <div class="row get-row mr-minus-8" id="areaname">
-                            
+                            <div id="searchList"></div>
                             <div>
                               <span id="notvalid"> </span>
                             </div>
+                            <div id="filter-records"></div>
+                            
                             <!-- <div class="errorarea">
                                                 Select minimum 2 checkbox
                                             </div> -->
