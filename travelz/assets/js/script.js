@@ -67,6 +67,7 @@ function checkButtonUser() {
                         "confirm password must not be empty.....";
                       }else{document.getElementById("confpass").innerHTML ="";}
                       if (!checkButtonWhat()){
+                        
                         // debugger
                         document.getElementById("errormsgwhat").innerHTML =
                           "what to do next must not be empty.....";
@@ -617,15 +618,18 @@ function myFunGroup(){
 // }
 
 function myFunPass(){
+  
   // debugger
   var pass = document.getElementById("password").value;
   var validpass = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/
-  if(pass == "") {  
-    document.getElementById("password1").innerHTML = "Fill the password please....!!!!!!"; 
+//   if(pass == "") {  
     
-    return false;  
- }  
+//     document.getElementById("password1").innerHTML = "Fill the password please....!!!!!!"; 
+    
+//     return false;  
+//  }  
  if(pass.length < 8) {  
+  alert('hellooooooooooooo')
   document.getElementById("password1").innerHTML = "Password length must be atleast 8 characters.....";  
   
   return false;  
@@ -813,69 +817,60 @@ async function area_user(){
 area_user();
 
 
-
-
-
 fetch("http://127.0.0.1:5500/area.json")
 .then(function(response){
   return response.json();
 })
 .then(function(areas){
-  
-  // let search = document.getElementById("searchInput").toUpperCase();
-  
   let placeholder = document.querySelector("#areaname");
   let out = "";
   for (let product of areas){
-    xoxo = product.name.toUpperCase();
-    console.log(xoxo);
-    
     out += `
     <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                              <div
-                                class="img-checkbox-card-box area-card-box"
-                                data-title="${product.name}"
-                              >
-                                <label
-                                  for="${product.label}"
-                                  class="label-box"
+                                <div
+                                  class="img-checkbox-card-box area-card-box"
+                                  data-title="${product.name}"
                                 >
-                                  <li
-                                    style="
-                                      color: white;
-                                      font-weight: bolder;
-                                      font-size: 16px;
-                                    "
+                                  <label
+                                    for="${product.label}"
+                                    class="label-box"
                                   >
-                                    <div class="check-box-position">
-                                      <button class="checkbox-round-div">
-                                        <i class="fe fe-check fe-custom"></i>
-                                      </button>
-                                    </div>
-                                    <div class="img-banner">
-                                      <img
-                                        src="${product.image}"
-                                        class="img-fluid img-responsive"
-                                        alt="area"
-                                      />
-                                    </div>
-                                    <div
-                                      class="check-title-row"
-                                    
+                                    <li
+                                      style="
+                                        color: white;
+                                        font-weight: bolder;
+                                        font-size: 16px;
+                                      "
                                     >
-                                      <a>${product.name}</a>
+                                      <div class="check-box-position">
+                                        <button class="checkbox-round-div">
+                                          <i class="fe fe-check fe-custom"></i>
+                                        </button>
+                                      </div>
+                                      <div class="img-banner">
+                                        <img
+                                          src="${product.image}"
+                                          class="img-fluid img-responsive"
+                                          alt="area"
+                                        />
+                                      </div>
+                                      <div
+                                        class="check-title-row"
                                       
-                                    </div>
-                                  </li>
-                                </label>
-                                <input
-                                  type="checkbox"
-                                  class="form-checkbox form-checkbox-areas"
-                                  id="${product.id}"
-                                  onclick="myFunArea()"
-                                />
+                                      >
+                                        <a>${product.name}</a>
+                                        
+                                      </div>
+                                    </li>
+                                  </label>
+                                  <input
+                                    type="checkbox"
+                                    class="form-checkbox form-checkbox-areas"
+                                    id="${product.id}"
+                                    onclick="myFunArea()"
+                                  />
+                                </div>
                               </div>
-                            </div>
     
 
     `;
@@ -884,78 +879,82 @@ fetch("http://127.0.0.1:5500/area.json")
 // console.log(product.name);
 // console.log(product.id);  
   }
-  // console.log(search)
-  // console.log(areas)
-  // console.log(areas.title)
+  
   // console.log(placeholder)
   placeholder.innerHTML = out;
-  // res = await JSON.search( data, '//*[id="select-area-option01"]' );
-
-  // console.log( res[0].name);
   
 })
 
 
-// async function search(){
-//   let searcharea = document.getElementById("searchInput").value.toUpperCase();
-//   const placeholder = await fetch("http://127.0.0.1:5500/area.json");
-  
-//   const areas = await placeholder.json();
-//   let out = ""
-//   for (let product of areas){
-//   info = product.name.toUpperCase();
-//   if(info.indexOf(searcharea) > -1){
-//     out += `
-//     <div class="col-lg-3 col-md-3 grid-20 plr-8">
-//                               <div
-//                                 class="img-checkbox-card-box area-card-box"
-//                                 data-title="${product.name}"
-//                               >
-//                                 <label
-//                                   for="${product.label}"
-//                                   class="label-box"
-//                                 >
-//                                   <li
-//                                     style="
-//                                       color: white;
-//                                       font-weight: bolder;
-//                                       font-size: 16px;
-//                                     "
-//                                   >
-//                                     <div class="check-box-position">
-//                                       <button class="checkbox-round-div">
-//                                         <i class="fe fe-check fe-custom"></i>
-//                                       </button>
-//                                     </div>
-//                                     <div class="img-banner">
-//                                       <img
-//                                         src="${product.image}"
-//                                         class="img-fluid img-responsive"
-//                                         alt="area"
-//                                       />
-//                                     </div>
-//                                     <div
-//                                       class="check-title-row"
-                                    
-//                                     >
-//                                       <a>${product.name}</a>
-                                      
-//                                     </div>
-//                                   </li>
-//                                 </label>
-//                                 <input
-//                                   type="checkbox"
-//                                   class="form-checkbox form-checkbox-areas"
-//                                   id="${product.id}"
-//                                   onclick="myFunArea()"
-//                                 />
-//                               </div>
-//                             </div>
-//     `
-//   }
-// }  
 
-// }
+async function search(){
+  {
+    let searchbox = document.getElementById("searchInput").value.toUpperCase();
+    console.log(searchbox);
+    const response = await fetch ("http://127.0.0.1:5500/area.json");
+    const areas = await response.json();
+    console.log(areas); 
+    let out = ""
+    for(product of areas){
+      xoxo = product.name.toUpperCase();
+      console.log(xoxo);
+      if(xoxo.indexOf(searchbox) > -1){
+        out += `
+        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                <div
+                                  class="img-checkbox-card-box area-card-box"
+                                  data-title="${product.name}"
+                                >
+                                  <label
+                                    for="${product.label}"
+                                    class="label-box"
+                                  >
+                                    <li
+                                      style="
+                                        color: white;
+                                        font-weight: bolder;
+                                        font-size: 16px;
+                                      "
+                                    >
+                                      <div class="check-box-position">
+                                        <button class="checkbox-round-div">
+                                          <i class="fe fe-check fe-custom"></i>
+                                        </button>
+                                      </div>
+                                      <div class="img-banner">
+                                        <img
+                                          src="${product.image}"
+                                          class="img-fluid img-responsive"
+                                          alt="area"
+                                        />
+                                      </div>
+                                      <div
+                                        class="check-title-row"
+                                      
+                                      >
+                                        <a>${product.name}</a>
+                                        
+                                      </div>
+                                    </li>
+                                  </label>
+                                  <input
+                                    type="checkbox"
+                                    class="form-checkbox form-checkbox-areas"
+                                    id="${product.id}"
+                                    onclick="myFunArea()"
+                                  />
+                                </div>
+                              </div>
+        
+        `
+      }
+      document.getElementById("areaname").innerHTML = "";
+      document.getElementById("areaname").innerHTML = out;
+
+    }
+  }
+}
+
 
 
 fetch("http://127.0.0.1:5500/user.json")
@@ -1025,6 +1024,77 @@ fetch("http://127.0.0.1:5500/user.json")
   
 })
 
+
+async function searchUser(){
+  {
+    let searchbox = document.getElementById("myInputUser").value.toUpperCase();
+    console.log(searchbox);
+    const response = await fetch ("http://127.0.0.1:5500/user.json");
+    const areas = await response.json();
+    console.log(areas); 
+    let out = ""
+    for(product of areas){
+      xoxo = product.name.toUpperCase();
+      coco = product.email.toUpperCase();
+      console.log(xoxo);
+      if(xoxo.indexOf(searchbox) > -1 || coco.indexOf(searchbox) > -1){
+        out += `
+        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                              <div class="user-card-box follow-card-box">
+                                <label
+                                  for="${product.id}"
+                                  class="label-box"
+                                >
+                                  <li
+                                    style="
+                                      color: white;
+                                      font-weight: bolder;
+                                      font-size: 16px;
+                                    "
+                                  >
+                                    <div class="check-box-position">
+                                      <button class="checkbox-round-div">
+                                        <i class="fe fe-check fe-custom"></i>
+                                      </button>
+                                    </div>
+                                    <div class="img-user-thumb">
+                                      <img
+                                        src="${product.image}"
+                                        class="img-fluid img-user"
+                                        alt="follow"
+                                      />
+                                    </div>
+                                    <div class="check-title-row">
+                                      <a>
+                                        <h4>${product.name}</h4>
+                                      </a>
+                                      <a>
+                                        <p>${product.email}</p>
+                                      </a>
+                                      <!-- <h4>sunny</h4> -->
+                                    </div>
+                                  </li>
+                                </label>
+                                <input
+                                  type="checkbox"
+                                  class="form-checkbox form-checkbox-follow"
+                                  id="${product.id}"
+                                  onclick="myFunUser()"
+                                />
+                              </div>
+                            </div>
+        
+        `
+      }
+      document.getElementById("username").innerHTML = "";
+      document.getElementById("username").innerHTML = out;
+
+    }
+  }
+}
+
+
+
 fetch("http://127.0.0.1:5500/group.json")
 .then(function(response){
   return response.json();
@@ -1087,6 +1157,73 @@ fetch("http://127.0.0.1:5500/group.json")
   placeholder.innerHTML = out;
   
 })
+
+
+async function searchGroup(){
+  {
+    let searchbox = document.getElementById("myInputGroup").value.toUpperCase();
+    console.log(searchbox);
+    const response = await fetch ("http://127.0.0.1:5500/group.json");
+    const areas = await response.json();
+    console.log(areas); 
+    let out = ""
+    for(product of areas){
+      xoxo = product.name.toUpperCase();
+      console.log(xoxo);
+      if(xoxo.indexOf(searchbox) > -1){
+        out += `
+        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                              <div
+                                class="img-checkbox-card-box groups-card-box"
+                              >
+                                <label
+                                  for="${product.label}"
+                                  class="label-box"
+                                >
+                                  <li
+                                    style="
+                                      color: white;
+                                      font-weight: bolder;
+                                      font-size: 16px;
+                                    "
+                                  >
+                                    <div class="check-box-position">
+                                      <button class="checkbox-round-div">
+                                        <i class="fe fe-check fe-custom"></i>
+                                      </button>
+                                    </div>
+                                    <div class="img-banner">
+                                      <img
+                                        src="${product.image}"
+                                        class="img-fluid img-responsive"
+                                        alt="groups"
+                                      />
+                                    </div>
+                                    <div class="check-title-row">
+                                      <a>${product.name}</a>
+                                      <!-- <h4>Akihabara</h4> -->
+                                    </div>
+                                  </li>
+                                </label>
+                                <input
+                                  type="checkbox"
+                                  class="form-checkbox form-checkbox-groups"
+                                  id="${product.label}"
+                                  onclick="myFunGroup()"
+                                />
+                              </div>
+                            </div>
+        
+        `
+      }
+      document.getElementById("groupname").innerHTML = "";
+      document.getElementById("groupname").innerHTML = out;
+
+    }
+  }
+}
+
+
 
 
 // const input = document.getElementById("searchInput");
