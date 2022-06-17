@@ -74,7 +74,21 @@ function checkButtonUser() {
                         }
                         
 } 
+// if(!myFunPass()){
+//   document.getElementById("password1").innerHTML = 
+//   "password must not be empty...";
+//   if(!myFunConPass()){
+//     document.getElementById("confpass").innerHTML = 
+//     "confirm password must not be empty...";
 
+//   }
+//   else{
+//     document.getElementById("confpass").innerHTML = "";
+//   }
+// }
+// else{
+//   document.getElementById("password1").innerHTML = "";
+// }
 
 function userValidation() {
   var username = document.getElementById("user_field").value;
@@ -621,15 +635,14 @@ function myFunPass(){
   
   // debugger
   var pass = document.getElementById("password").value;
-  var validpass = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/
-//   if(pass == "") {  
+  console.log(pass);
+  var validpass = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/
+  if(pass == "") {  
+    document.getElementById("password1").innerHTML = "Fill the password please....!!!!!!"; 
     
-//     document.getElementById("password1").innerHTML = "Fill the password please....!!!!!!"; 
-    
-//     return false;  
-//  }  
+    return false;  
+ }  
  if(pass.length < 8) {  
-  alert('hellooooooooooooo')
   document.getElementById("password1").innerHTML = "Password length must be atleast 8 characters.....";  
   
   return false;  
@@ -641,21 +654,22 @@ if  (!pass.match(validpass)) {
 
 }
 else{
+  
   document.getElementById('displaypass').innerHTML = " password created successfully....!!!!"
   document.getElementById("password1").innerHTML = ""
   return true;
 }
-// else{
-// return true;
-// }
+
 }
+
+
 function myFunConPass(){
 var pass1=document.getElementById("password").value;
 var pass2=document.getElementById("confirm-password").value;
 
 if(pass1!=pass2){
   document.getElementById("confpass").innerHTML = "**Please enter same password...!!!!!!";
-  document.getElementById('displaypass').innerHTML = " "
+  document.getElementById('displaypass').innerHTML = ""
   return false;
 }
 else{
@@ -843,10 +857,12 @@ fetch("http://127.0.0.1:5500/area.json")
                                       "
                                     >
                                       <div class="check-box-position">
+                                      
                                         <button class="checkbox-round-div">
                                           <i class="fe fe-check fe-custom"></i>
                                         </button>
                                       </div>
+                                      
                                       <div class="img-banner">
                                         <img
                                           src="${product.image}"
@@ -885,6 +901,7 @@ fetch("http://127.0.0.1:5500/area.json")
   
 })
 
+                                      
 
 
 async function search(){
@@ -916,11 +933,14 @@ async function search(){
                                         font-size: 16px;
                                       "
                                     >
+                                    
                                       <div class="check-box-position">
                                         <button class="checkbox-round-div">
-                                          <i class="fe fe-check fe-custom"></i>
+                                          <i class="fe fe-check-circle"></i>
                                         </button>
                                       </div>
+                                      
+
                                       <div class="img-banner">
                                         <img
                                           src="${product.image}"
