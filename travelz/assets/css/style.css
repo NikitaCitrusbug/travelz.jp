@@ -3039,3 +3039,9 @@ header .header-div .logo-div .logo_link {
 #area .active #areaname li{
   display: block;
 }
+.step{
+  display: none;
+}
+.step.active{
+    display: block;
+}
