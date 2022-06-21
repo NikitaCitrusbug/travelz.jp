@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <h1>HELLO</h1>
+        <h1>Name : <span id="result"></span></h1>
+        <h1>Email : <span id="result-email"> </span>  </h1>
+        <h1>Occupation : <span id="result-occupation"></span>  </h1>
+        <h1>Age :</h1>
+        <h1>Area :</h1>
+        <h1>User :</h1>
+        <h1>Group :</h1>
+        <h1>Password : <span id="result-password"></span> </h1>
+        <h1>What to do :</h1>
+    <script>
+            var d = localStorage.getItem("myValue");
+            var e = localStorage.getItem("myValueEmail");
+            var f = localStorage.getItem("myValuePassword");
+            document.getElementById('result').innerHTML = d;
+            document.getElementById('result-email').innerHTML = e;
+            // document.getElementById('result-occupation').innerHTML = f;
+            document.getElementById('result-password').innerHTML = f;
+            // alert("this is received is " +b);
+            var resetValue = 0;
+            localStorage.setItem("myValue" , resetValue);
+
+
+
+
+        // window.addEventListener('load' , () => {
+        //     alert('hello')
+        //     const name = localStorage.getItem('username');  
+        //     const email = localStorage.getItem('email');  
+        //     document.getElementById('result').innerHTML = name;
+        //     document.getElementById('result-email').innerHTML = email;
+        // })
+        // document.getElementById("result").innerHTML = localStorage.getItem("textvalue");
+        
+        // console.log(result);
+    </script>
+    
+</body>
+</html>

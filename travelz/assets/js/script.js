@@ -24,6 +24,30 @@ const steps = Array.from(document.querySelectorAll('form .step'));
 console.log(steps);
 
 
+// function show_hide(){
+//   if(userValidation() && emailValidation()){
+//     document.getElementById('occu').style.display = "flex";
+//   }
+//   if(checkButtonOccupation()){
+//     document.getElementById('age').style.display = "flex";
+//   }
+//   if(checkButtonAge()){
+//     document.getElementById('areaxoxo').style.display = "flex";
+//   }
+//   if(checkButtonArea()){
+//     document.getElementById('user').style.display = "flex";
+//   }
+//   if(checkButtonUsergroup()){
+//     document.getElementById('group').style.display = "block";
+//   }
+//   if(checkButtonGroup()){
+//     document.getElementById('pas').style.display = "flex";
+//   }
+//   if(myFunPass() && myFunConPass()){
+//     document.getElementById('what').style.display = "flex";
+//   }
+// }
+
 
 
 function checkButtonUser() {  
@@ -37,41 +61,79 @@ function checkButtonUser() {
       document.getElementById("email-error").innerHTML =
         "email must not be empty.....";
       }
+      else{
+        document.getElementById('occu').style.display = "flex";
+      }
       if (!checkButtonOccupation()){
         document.getElementById("error").innerHTML =
           "occupation must not be empty.....";
         }
-        else { document.getElementById("error").innerHTML = ""; }
+        else {
+           document.getElementById("error").innerHTML = ""; 
+           document.getElementById('age').style.display = "flex";
+        }
         if (!checkButtonAge()){
           document.getElementById("errormsg").innerHTML =
             "age must not be empty.....";
-          }else{document.getElementById("errormsg").innerHTML ="";}
+          }else{
+            document.getElementById("errormsg").innerHTML ="";
+            document.getElementById('areaxoxo').style.display = "flex";
+          }
           if (!checkButtonArea()){
             document.getElementById("errormsgarea").innerHTML =
               "area must not be empty.....";
-            }else{document.getElementById("errormsgarea").innerHTML ="";}
+            }else{
+              document.getElementById("errormsgarea").innerHTML ="";
+              document.getElementById('user').style.display = "flex";
+            }
               if (!checkButtonUsergroup()){
                 document.getElementById("errormsguser").innerHTML =
                   "user must not be empty.....";
-                }else{document.getElementById("errormsguser").innerHTML ="";}
+                }else{
+                  document.getElementById("errormsguser").innerHTML ="";
+                  document.getElementById('group').style.display = "block";
+                }
                 if (!checkButtonGroup()){
                   document.getElementById("errormsggroup").innerHTML =
                     "group must not be empty.....";
-                  }else{document.getElementById("errormsggroup").innerHTML ="";}
+                  }else{
+                    document.getElementById("errormsggroup").innerHTML ="";
+                    document.getElementById('pas').style.display = "flex";
+                  }
                   if (!myFunPass()){
                     // debugger
                     document.getElementById("password1").innerHTML =
                       "password must not be empty.....";
-                    }else{document.getElementById("password1").innerHTML ="";}
+                    }else{
+                      document.getElementById("password1").innerHTML ="";
+                      document.getElementById('what').style.display = "none";
+                    }
                     if (!myFunConPass()){
                       document.getElementById("confpass").innerHTML =
                         "confirm password must not be empty.....";
-                      }else{document.getElementById("confpass").innerHTML ="";}
+                      }else{
+                        document.getElementById("confpass").innerHTML ="";
+                        document.getElementById('what').style.display = "flex";
+                      }
+                    
                       if (!checkButtonWhat()){
                         
                         // debugger
                         document.getElementById("errormsgwhat").innerHTML =
                           "what to do next must not be empty.....";
+                        }
+                        else{
+                          var a = document.getElementById('user_field').value; 
+                          var b = document.getElementById('email_field').value; 
+                          var c = document.getElementById('password').value; 
+                          // var c = document.getElementsByClassName('form-radio form-radio-occupation').value; 
+                          localStorage.setItem("myValue" , a);
+                          localStorage.setItem("myValueEmail" , b);
+                          localStorage.setItem("myValuePassword" , c);
+                          window.location.href = "home.html";
+                          // fetch('http://127.0.0.1:5500/home.html')
+                          // .then(response=> response.text())
+                          // .then(text=> document.getElementById('area').innerHTML = text);
                         }
                         
 } 
@@ -117,10 +179,10 @@ function userValidation() {
       return false;
     } else {
       document.getElementById("user-error").innerHTML 
-      = ""
-       
-}
-
+      = ""    
+      console.log(username);
+      // localStorage.setItem ("textvalue" , username);
+    }
       return true;
     }
   }
@@ -139,6 +201,7 @@ function emailValidation() {
         document.getElementById("email-error").innerHTML 
         = ""
         // alert("Thanks you....");
+        console.log(email.value);
         return true;
     }
  }
@@ -676,6 +739,7 @@ if(pass1!=pass2){
 else{
   // document.getElementById('displaypass').innerHTML = " password matched....!!!!"
   document.getElementById("confpass").innerHTML = ""
+  
  return true;
 }
 }
