@@ -117,7 +117,6 @@ function checkButtonUser() {
                       }
                     
                       if (!checkButtonWhat()){
-                        
                         // debugger
                         document.getElementById("errormsgwhat").innerHTML =
                           "what to do next must not be empty.....";
@@ -126,10 +125,93 @@ function checkButtonUser() {
                           var a = document.getElementById('user_field').value; 
                           var b = document.getElementById('email_field').value; 
                           var c = document.getElementById('password').value; 
-                          // var c = document.getElementsByClassName('form-radio form-radio-occupation').value; 
+                          // var h = document.getElementById('disp').value; 
+                          // var h = document.getElementsByTagName('p').value; 
+
+                            var type = document.getElementsByName('occupation-select');
+                            console.log(type);
+                            for(i of type){
+                              console.log(i)
+                              if(i.checked){
+                                // alert('hello')
+                                t = i.id;
+                                console.log(t);
+                              }
+                              else{
+                                // alert('hi')
+                              }
+                            }
+
+                            var h = document.getElementsByName('age-group-select');
+                            console.log(h);
+                            for(i of h){
+                              console.log(i)
+                              if(i.checked){
+                                // alert('hello')
+                                j = i.id;
+                                console.log(j);
+                              }
+                              else{
+                                // alert('hi')
+                              }
+                            }
+
+
+                            var m = document.getElementsByName('what-to-do-select');
+                            console.log(m);
+                            for(i of m){
+                              console.log(i)
+                              if(i.checked){
+                                // alert('hello')
+                                n = i.id;
+                                console.log(n);
+                              }
+                              else{
+                                // alert('hi')
+                              }
+                            }
+
+                            var q = document.getElementsByName('what-to-do-select');
+                            console.log(q);
+                            for(i of q){
+                              console.log(i)
+                              if(i.checked){
+                                // alert('hello')
+                                r = i.id;
+                                console.log(r);
+                              }
+                              else{
+                                // alert('hi')
+                              }
+                            }
+
+                              // if(type[0].checked){
+                              //   console.log(type[0]);
+                              //   t = document.getElementById('opt-radio01').value;
+                              //   console.log(t);
+                              //   alert('school student')
+                              // }
+                              // else if(type[1].checked){
+                              //   console.log(type[1]);
+                              //   alert('university student')
+                              // }
+                        
+
+
+                          // document.getElementsByName('occupation-select').forEach(radio => {
+                          //   if (radio.checked){
+                          //     console.log(radio.value);
+                          //   }
+                          // })
+
+                        
                           localStorage.setItem("myValue" , a);
                           localStorage.setItem("myValueEmail" , b);
                           localStorage.setItem("myValuePassword" , c);
+                          localStorage.setItem("myValueOccupation" , t);
+                          localStorage.setItem("myValueAge" , j);
+                          localStorage.setItem("myValueWhat" ,n );
+                          // localStorage.setItem("myValueOccupation" , h);
                           window.location.href = "home.html";
                           // fetch('http://127.0.0.1:5500/home.html')
                           // .then(response=> response.text())
@@ -137,6 +219,11 @@ function checkButtonUser() {
                         }
                         
 } 
+
+
+
+
+
 // if(!myFunPass()){
 //   document.getElementById("password1").innerHTML = 
 //   "password must not be empty...";

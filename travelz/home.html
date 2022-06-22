@@ -12,23 +12,37 @@
         <h1>Name : <span id="result"></span></h1>
         <h1>Email : <span id="result-email"> </span>  </h1>
         <h1>Occupation : <span id="result-occupation"></span>  </h1>
-        <h1>Age :</h1>
-        <h1>Area :</h1>
+        <h1>Age : <span id="result-age"></span>  </h1>
+        <h1>Area : <span id="result-area"></span> </h1>
         <h1>User :</h1>
         <h1>Group :</h1>
         <h1>Password : <span id="result-password"></span> </h1>
-        <h1>What to do :</h1>
+        <h1>What to do : <span id="result-what"></span> </h1>
     <script>
             var d = localStorage.getItem("myValue");
             var e = localStorage.getItem("myValueEmail");
             var f = localStorage.getItem("myValuePassword");
+            var g = localStorage.getItem("myValueOccupation");
+            var k = localStorage.getItem("myValueAge");
+            var l = localStorage.getItem("myValueWhat");
+            var p = localStorage.getItem("myValueArea");
+            // var g = localStorage.getItem("myValueOccupation");
             document.getElementById('result').innerHTML = d;
             document.getElementById('result-email').innerHTML = e;
-            // document.getElementById('result-occupation').innerHTML = f;
+            // document.getElementById('result-occupation').innerHTML = g;
             document.getElementById('result-password').innerHTML = f;
+            document.getElementById('result-occupation').innerHTML = g;
+            document.getElementById('result-age').innerHTML = k;
+            document.getElementById('result-what').innerHTML = l;
+            document.getElementById('result-area').innerHTML = p;
             // alert("this is received is " +b);
-            var resetValue = 0;
+            var resetValue = null;
             localStorage.setItem("myValue" , resetValue);
+            localStorage.setItem("myValueEmail" , resetValue);
+            localStorage.setItem("myValuePassword" , resetValue);
+            localStorage.setItem("myValueOccupation" , resetValue);
+            localStorage.setItem("myValueAge" , resetValue);
+            localStorage.setItem("myValueWhat" , resetValue);
 
 
 
